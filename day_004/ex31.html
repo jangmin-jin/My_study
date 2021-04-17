@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- CSS Text box -->
+        <style type="text/css">
+            div{
+                border: 2px solid black;
+                padding: 20px;
+                width: 300px;
+            }
+            div.text_1{
+                resize: horizontal;
+                overflow: auto;
+            }
+            div.text_2{
+                resize: vertical;
+                overflow: auto;
+            }
+            div.text_3{
+                resize: both;
+                overflow: auto;
+            }
+            div.text_4{
+                resize: none;
+                overflow: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>The resize Property</h1>
+        <div class="text_1">
+            <p>Let the user resize only the width of this div element.</p>
+            <p>To resize: Click and drag the bottom right corner of this div element.</p>
+        </div><br>
+        <div class="text_2">
+            <p>Let the user resize only the height of this div element.</p>
+            <p>To resize: Click and drag the bottom right corner of this div element.</p>
+        </div><br>
+        <div class="text_3">
+            <p>Let the user resize only the height of this div element.</p>
+            <p>To resize: Click and drag the bottom right corner of this div element.</p>
+        </div><br>
+        <div class="text_4">
+            <p>Let the user resize only the height of this div element.</p>
+            <p>To resize: Click and drag the bottom right corner of this div element.</p>
+        </div>
+    </body>
+</html>

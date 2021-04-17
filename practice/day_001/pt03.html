@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" width="800" height="800">
+        <!-- iframe -->
+        <tr>
+            <td align="center"><iframe src="http://m.daum.net" frameborder="1" width="100%" height="500"></iframe></td>
+        </tr>
+        <!-- 각 도메인별 메인화면 이동 -->
+        <tr>
+            <td align="center"><a href="http://daum.net"><input type="image" src="../images/daum.PNG"></td>
+        </tr>
+        <tr>
+            <td align="center"><a href="http://naver.com"><input type="image" src="../images/naver.png"></td>
+        </tr>
+        <tr>
+            <td align="center"><a href="http://google.com"><input type="image" src="../images/search.png"></td>
+        </tr>
+        <!-- 각 도메인별 검색창 -->
+        <form action="https://search.naver.com/search.naver?query" method="GET">
+            <tr bgcolor="green" align="center" height="200">
+                <td>
+                    <input type="text" name="query" placeholder="네이버 검색">
+                    <input type="submit" value="검색">
+                </td>
+            </tr>
+        </form>
+        <form action="https://search.daum.net/search?q" method="GET">
+            <tr bgcolor="blue" align="center" height="200">
+                <td>
+                    <input type="text" name="q" placeholder="다음 검색">
+                    <input type="submit" value="검색">
+                </td>
+            </tr>
+        </form>
+        <form action="https://www.google.co.kr/search?q">
+            <tr bgcolor="#aaaaaa" align="center" height="200">
+                <td>
+                    <input type="text" name="q" placeholder="구글 검색">
+                    <input type="submit" value="검색">
+                </td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>

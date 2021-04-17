@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- input type -->
+    <form action="">
+         <!-- file input -->
+        <input type="file"><br><br>
+        <input type="file"><br><br>
+        <!-- color input -->
+        <input type="color"><br><br>
+        <input type="color" value="#aaaaaa"><br><br>
+        <!-- date input -->
+        <input type="day"><br>
+        <input type="day" value="2020-02-27"><br>
+        <input type="day" placeholder="2020-02-27"><br>
+        <!-- number input -->
+        <input type="number" placeholder="숫자선택"><br>
+        <input type="number" min="0" max="25" value="0"><br>
+        <input type="number" min="0" max="25" value="0" step="5"><br>
+        <!-- range input -->
+        <input type="range" min="0" max="100"><br>
+        <!-- 
+            제시어 기능 
+            input 탭의 list 명과 datalist의 id는 일치하여야 한다.
+        -->
+        <input type="text" list="browser">
+        <datalist id="browser">
+            <option value="Internet Explorer"></option>
+            <option value="Fire Fox"></option>
+            <option value="Chrome"></option>
+            <option value="Safari"></option>
+        </datalist>
+    </form>
+</body>
+</html>

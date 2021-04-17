@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+      <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+    </head>
+    <body>
+        <!-- where=nexearch&sm=top_hty&fbm=1&ie=utf8 -->
+        <form action="https://search.naver.com/search.naver?query" method="GET">
+            <!-- 디자인에 포함되지 않음(hidden) -->
+            <input type="hidden" name="where" value="nexearch">
+            <input type="hidden" name="sm" value="top_hty">
+            <input type="hidden" name="fbm" value="1">
+            <input type="hidden" name="ie" value="utf8">
+            <!-- 검색, 리셋 파트 -->
+            검색어 <input type="text" name="query" placeholder="검색어를 입력하세여">
+            <input type="submit" value="검색">
+            <input type="reset" value="리셋">
+            <!-- 빈 껍데기 버튼 생성 -->
+            <input type="button" value="버튼 모양">
+        </form>
+    </body>
+</html>

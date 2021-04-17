@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        전송 처리
+        action : 입력 데이터를 처리 하는 페이지
+        method : 전송방식 (get / host)
+        enctype
+        
+        http://127.0.0.1:8080/test.jsp?id=111&pw=222
+        http            : 전송 protocol
+        localhost       : 도메인
+        8080            : 포트
+        test.jsp        : 처리페이지
+        ?               : 구분자
+        id=111&pwd=222  : 쿼리스트링
+                            & 구분
+                            = 값
+    -->
+    <form action="test.jsp" method="get">
+        <!-- 
+            입력 내용**
+            name변수에 submit에 입력된 내용을 담아서 get방식으로 test.jsp로 전송해줌
+        -->
+        <input type="text" name="id" placeholder="아이디를 입력하세요"><br>
+        <input type="text" name="pwd" placeholder="비밀번호를 입력하세요"><br>
+        <input type="submit" value="확인">
+    </form>
+</body>
+</html>

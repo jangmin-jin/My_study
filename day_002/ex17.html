@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+      <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- 
+            다음을 통한 검색
+         -->
+        <a href="https://search.daum.net/search?q=covid">covid 검색</a><br>
+        <a href="https://search.daum.net/search?q=covid-19">covid-19 검색</a><br>
+        <a href="https://search.daum.net/search?q=starwars">starwars 검색</a><br>
+        <!-- 
+            입력을 받아서 검색하기    
+            image를 클릭하여 이동
+            submit 버튼을 클릭하여 이동
+         -->
+        <form action="https://search.daum.net/search" method="get">
+            <input type="image" src="images/daum.PNG">
+            <input type="text" name="q" placeholder="검색어를 입력하세요">
+            <input type="submit" value="다음에서 검색">
+        </form>
+    </body>
+</html>

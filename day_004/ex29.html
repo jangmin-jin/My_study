@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- CSS styling images -->
+        <style type="text/css">
+            img{
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 5px;
+                width: 150px;
+            }
+            img:hover{
+                box-shadow: 0 0 2px 1px rgba(0, 140, 185, 0.5);
+            }
+        </style>
+    </head>
+    <body style="text-align: center;">
+        <h2>Thumbnail Image as Link</h2>
+        <p>Use the border property to create thumbnail images. Wrap an anchor around the image to use it as a link.</p>
+        <p>Hover over the image and click on it to see the effect.</p>
+
+        <a target="_blank" href="./imeges/img_forest.jpg">
+            <img src="./imeges/img_forest.jpg" alt="forest" style="width:150px">   
+        </a>
+    </body>
+</html>

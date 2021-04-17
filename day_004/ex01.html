@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style type="text/css">
+            /* 박스 만들기 */
+            #d1, #p1{
+                /* 블록 크기 */
+                width: 200px;
+                height: 200px;
+                background-color: wheat;
+
+                /* 블록 디자인
+                    border-style: inset;
+                    border-width: 3px;
+                    border-color: red;
+                 */
+
+                /* 줄여서 칠수도 있고 적용 부분도 따로 설정할 수 있다. */
+                border-left: 3px inset red;
+                border-right: 7px inset blue;
+                border-top: 5px inset green;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="d1">안녕 보더야 난 일론머스크라고해</div>
+        <p id="p1">Hello Border</p>
+    </body>
+</html>

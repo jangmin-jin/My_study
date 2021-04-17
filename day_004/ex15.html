@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- ul / li와 float를 활용한 깔끔한 스타일의 표 만들기 -->
+        <style type="text/css">
+            ul {
+                list-style-type: none;
+                margin: 0%;
+                padding: 0%;
+                overflow: hidden;
+                background-color: black;
+            }
+            /* floating */
+            li {
+                float: left;
+            }
+            li a {
+                display: block;
+                color:white;
+                padding: 14px 16px;
+                text-align: center;
+                text-decoration: none;
+            }
+            /* 클래스 열만 별도로 지정 */
+            li a.active{
+                background-color: #4caf50;
+                color: white;
+            }
+            /* .active 클래스를 제외한 나머지 개체에서 hover 기능 사용 */
+            li a:hover:not(.active){
+                background-color: #555;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Vertical Navigation Bar</h2>
+        <p>In this example, we create an "active" class with a green background color and a white text. The class is added to the "Home" link.</p>
+
+        <ul>
+            <!-- 클래스 지정하여 열마다 다르게 옵션을 줄 수 있다 -->
+            <li><a class="active" href="#home">Home</a></li>
+            <!-- 각종 링크를 걸수 있다 -->
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://www.w3schools.com/">w3 schools</a></li>
+        </ul>
+    </body>
+</html>

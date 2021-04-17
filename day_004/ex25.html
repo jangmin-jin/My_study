@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- 2D Transforms (transition) 회전시키기 -->
+        <style type="text/css">
+            div{
+                width: 50px;
+                height: 50px;
+                background-color: rgb(151, 91, 151);
+                border: 1px solid black;
+
+                transition: transform 2s;
+            }
+            img{
+                width: 100px;
+                height: 100px;
+                background-color: none;
+                border: 0px;
+                
+                transition: transform 2s;
+            }
+            div:hover{
+                width: 300px;
+                height: 300px;
+                transform:rotate(360deg);
+            }
+            img:hover{
+                transform: rotate(360deg);
+            }
+        </style>
+    </head>
+    <body>
+        <img src="./imeges/heos.png" alt="heos" name="heos">
+        <div id="d1">Hello DIV 1</div>
+    </body>
+</html>

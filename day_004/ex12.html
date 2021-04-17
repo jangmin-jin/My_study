@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style type="text/css">
+            /* overflow 활용 */
+            div {
+                background-color: rgb(115, 201, 115);
+                border-style: dotted;
+                width: 300px;
+                height: 100px;
+                /* 
+                overflow
+                overflow: visible  - 그냥 넘어가는 대로 둠 
+                overflow: hidden   - 넘어가는 부분 삭제
+                overflow: scrool   - 영역 내에서 스크롤 할 수 있는 영역 생성
+                overflow: auto     - 영역 사이즈에 맞춰서 자동으로 생성
+                */
+                overflow-x: hidden;
+                overflow-y: scroll;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>CSS Overflow</h2>
+        <p>You can also change the overflow of content horizontally or vertically.</p>
+        <p>overflow-x specifies what to do with the left/right edges of the content.<br>
+        overflow-y specifies what to do with the top/bottom edges of the content.</p>
+
+        <div>You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+    </body>
+</html>

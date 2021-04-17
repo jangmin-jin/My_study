@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" width="1500" cellspacing="0" cellpadding="10">
+        <tr>
+            <td width="150" valign="mid">
+                <ul>
+                    <!-- 표안에 하이퍼 링크(즐겨찾기) 형식 구성 -->
+                    <!-- target으로 열리는 위치 임의 지정 -->
+                    <li><a href="https://m.daum.net" target="child">다음 모바일</a></li>
+                    <li><a href="http://www.etnews.com" target="child">전자신문</a></li>
+                    <li><a href="http://www.zdnet.co.kr" target="child">지디넷 코리아</a></li>
+                </ul>
+            </td>
+            <td>
+                <!-- name <-target의 대상 -->
+                <iframe src="https://m.daum.net" name="child" width="100%" height="800" frameborder="1"></iframe><br>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

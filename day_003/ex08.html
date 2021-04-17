@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style type="text/css">
+            /* 자식 1촌, 후손 2촌 */
+            /* 전체 지정은 div p {color:read}로 한다.(span>p까지 염색됨) */
+            div > p {color: red;}
+            span > p {color: blue;}
+            /* 형제 관계(+:바로 밑에 동생만 / ~:모든 동생들만) */
+            div ~ p {color: green;}
+        </style>
+    </head>
+    <body>
+        <!-- 계층 구조 : DOM(Document Object Moidel) tree -->
+        <div>
+            <p>Hello CSS2</p>
+            <span>
+                <p>Hello CSS3</p>
+            </span>
+            <p>Hello CSS4</p>
+        </div>
+        <p>Hello CSS5</p>
+        <p>Hello CSS6</p>
+    </body>
+</html>

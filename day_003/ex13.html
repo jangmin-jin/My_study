@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style type="text/css">
+            /* attribute selector */
+            a {border-right-color: sandybrown;}
+            /* 타겟이 선언된 모든 타겟에 대해 변경 */
+            a[target] {background-color: red;}
+            /* _blank만 타겟으로 이루어진 타겟에 대해 변경 */
+            a[target="_blank"] {background-color:green;}
+            /* _blank가 포함된 모든 타겟에 대해 변경 */
+            a[target~="_blank"] {background-color: blue;}
+        </style>
+    </head>
+    <body>
+        <!-- 일반 -->
+        <a href="http://m.naver.com">네이버</a><br>
+        <!-- 새 탭에서 열기 -->
+        <a href="http://m.naver.com" target="_top1 _blank _top2">네이버</a><br>
+        <a href="http://m.naver.com" target="_top">네이버</a><br>
+    </body>
+</html>
