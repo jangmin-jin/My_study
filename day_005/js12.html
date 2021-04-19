@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            //선언 및 초기화
+            let test_1 = 1;
+            console.log(typeof test_1);
+
+            //undefined 선언되지 않음
+            console.log(typeof test_2);
+
+            //umdefined 초기화되지 않음
+            let test_3;
+            console.log(typeof test_3);
+            console.log(test_3);
+            
+            test_3 = 'aa';
+            console.log(typeof test_3);
+            console.log(test_3);
+            //중복 선언
+            //let test_3 = 'aa'; (X)
+
+            //null 초기화
+            let test_4 = null;
+            console.log(typeof test_4);
+            console.log(test_4);
+        </script>
+    </body>
+</html>
