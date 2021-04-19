@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            //변수 선언
+            let kor = prompt("국어 성적을 입력하세요");
+                kor = Number(kor);
+            let eng = prompt("영어 성적을 입력하세요");
+                eng = Number(eng);  
+            let mat = prompt("수학 성적을 입력하세요");
+                mat = Number(mat);
+            let average = (kor + eng + mat)/3;
+            console.log("평균점수는" + average + "입니다.");
+            //kor 성적 구분
+            if (kor >= 90){
+                console.log("국어 : 수");
+            }else if (kor >=80){
+                console.log("국어 : 우");
+            }else if (kor >=70){
+                console.log("국어 : 미");
+            }else if (kor >=60){
+                console.log("국어 : 양");
+            }else{
+                console.log("국어 : 가");
+            }
+            //eng 성적 구분
+            if (eng >= 90){
+                console.log("영어 : 수");
+            }else if (eng >=80){
+                console.log("영어 : 우");
+            }else if (eng >=70){
+                console.log("영어 : 미");
+            }else if (eng >=60){
+                console.log("영어 : 양");
+            }else{
+                console.log("영어 : 가");
+            }
+            //mat 성적 구분
+            if (mat >= 90){
+                console.log("수학 : 수");
+            }else if (mat >=80){
+                console.log("수학 : 우");
+            }else if (mat >=70){
+                console.log("수학 : 미");
+            }else if (mat >=60){
+                console.log("수학 : 양");
+            }else{
+                console.log("수학 : 가");
+            }
+        </script>
+    </body>
+</html>

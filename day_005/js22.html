@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            //선택적 if
+            console.log("시작");
+            let hakjum = prompt("시간을 입력하세요");
+            if (hakjum >= 90){
+                console.log("A");
+            }else{
+                if (hakjum >= 80){
+                    console.log("B");
+                }else{
+                    if (hakjum >= 70){
+                        console.log("C");
+                    }else{
+                        if (hakjum >= 60){
+                            console.log("D");
+                        }else{
+                            console.log("F");
+                        }
+                    }
+                }
+            }
+            //if else if 문 사용
+            if (hakjum >= 90){
+                console.log("A");
+            }else if (hakjum >= 80){
+                    console.log("B");
+            }else if (hakjum >= 70){
+                    console.log("C");
+            }else if (hakjum >= 60){
+                    console.log("D");
+            }else{
+                    console.log("F");
+            }
+        </script>
+    </body>
+</html>
