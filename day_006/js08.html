@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+        <link rel="stylesheet" href="./css01.css">
+    <body>
+        <script type="text/javascript">
+            "use strict"
+            //table type 4 (구구단)
+            //제어와 출력부 구분
+            let html_99dan = '<table border="1" width="300">';
+                for(let row=1; row<10; row++){
+                    html_99dan += '<tr>';
+                    for(let col=1; col<10; col++){
+                            html_99dan += '<td>' + col + "X" + row + "=" + col*row + '</td>';
+                    }
+                    html_99dan += '</tr>';
+                }
+                html_99dan += '</table>';
+            document.write( html_99dan )
+            //직접 출력
+            document.write('<table border="1" width="300">');
+            for(let row=1 ; row<10 ; row++){
+                document.write('<tr>');
+                for(let col=1 ; col<10; col++){
+                        document.write('<td>' + col + "X" + row + "=" + col*row + '</td>');
+                }
+                document.write('</tr>');
+            }
+            document.write('</tabel>');
+        </script>
+    </body>
+</html>

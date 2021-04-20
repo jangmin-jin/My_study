@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <link rel="stylesheet" href="./css01.css">
+    <body>
+        <script type="text/javascript">
+            "use strict"
+            //선언과 동시에 초기화
+            let arr_1=[1, 2, 3, 4];
+            let arr_2=['1', '2', '3', '4'];
+            let arr_3=[true, false];
+            //혼합은 가능하지만 권장되지 않는다
+            let arr_4=[273, 'string_1', 'string_2', false];
+            console.log(arr_1);
+            console.log(arr_2);
+            console.log(arr_3);
+            console.log(arr_4);
+            //문자열도 내부적으로는 배열이다
+            let str = 'abcdf';
+            console.log(str.length);
+            console.log(str[0]);
+            console.log(str[str.length-1]);
+        </script>
+    </body>
+</html>

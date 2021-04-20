@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <link rel="stylesheet" href="./css01.css">
+    <body>
+        <script type="text/javascript">
+            "use strict"
+            //선언과 동시에 초기화
+            let arr_1=[1, 2, 3, 4];
+            //선언
+            let arr_2=[];
+            //초기화
+            arr_2[0]=1;
+            arr_2[1]=2;
+            arr_2[2]=3;
+            arr_2[3]=4;
+            
+            let arr_3;
+            arr_3=[1, 2, 3, 4];
+
+            console.log(arr_1);
+            console.log(arr_2);
+            console.log(arr_3);
+            //전체 데이터 확인
+            console.log(arr_1[0]);
+            console.log(arr_1[1]);
+            console.log(arr_1[2]);
+            console.log(arr_1[3]);
+            //for문을 이용한 전체 데이터 확인
+            for(let i=0; i<arr_1.length; i++){
+                console.log(arr_1[i]);
+            }
+            //향상된 for / for in문
+            for(let index in arr_1){
+                console.log(index, arr_1[index]);
+            }
+        </script>
+    </body>
+</html>

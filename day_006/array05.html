@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <link rel="stylesheet" href="./css01.css">
+    <body>
+        <script type="text/javascript">
+            "use strict"
+            //1차원 배열
+            let arr_1=[1, 2, 3];
+            //2차원 배열 (1차원 배열 안에 1차원 배열이 들어간 형태)
+            let arr_2=[
+                [10, 20, 30],
+                [40, 50, 60],
+                [70, 80, 90]
+            ];
+        console.log(arr_1);
+        console.log(arr_2);
+        console.log(arr_2[0]);
+        console.log(arr_2[1]);
+        console.log(arr_2[2]);
+
+        //행과 열
+        console.log(arr_2[0][0], arr_2[0][1], arr_2[0][2]);
+        console.log(arr_2[1][0], arr_2[1][1], arr_2[1][2]);
+        console.log(arr_2[2][0], arr_2[2][1], arr_2[2][2]);
+
+        console.log(arr_2.length);      //행의 갯수
+        console.log(arr_2[0].length);   //열의 갯수
+        
+        //for문을 이용하여 배열 전체 데이터 뽑기
+        for(let row=0; row<arr_2.length; row++){
+            for(let col=0; col<arr_2[0].length; col++){
+                console.log(arr_2[row][col]);
+            }
+        }
+        //for in 문을 이용하여 배열 전체 데이터 뽑기
+        for(let rowIndex in arr_2){
+            for(let colIndex in arr_2[rowIndex]){
+                console.log(arr_2[rowIndex][colIndex]);
+            }
+        }
+        //비대칭 선언도 가능
+        let arr_3=[
+                [10],
+                [40, 50],
+                [70, 80, 90]
+            ];
+        for(let rowIndex in arr_3){
+            for(let colIndex in arr_3[rowIndex]){
+                console.log(arr_3[rowIndex][colIndex]);
+            }
+        }    
+        </script>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            "use strict"
+            /*
+            ********** (10)
+            ********** (20)
+            ********** (30)
+            ...
+            
+            ********** (100)
+            */
+           /*
+           for(let row=0 ; row<10 ; row++){
+               console.log("**********");
+           }
+           */
+           for(let row=0 ; row<10 ; row++){
+               let star = "";
+               for(let col=0 ; col<10 ; col++){
+                   star +="*"
+               }
+               console.log(star);
+           }
+           /*
+           *            (1)
+           **           (2)
+           ***          (3)
+           ...          (..)
+           **********   (10)
+           */
+           for(let row=1 ; row<=10 ; row++){
+                let star ="";
+                for(let col=1; col<=row ; col++){
+                    star +="*";
+               }
+               console.log(star);
+           }
+           /*
+           **********   (10)
+           ...          (..)
+           ***          (3)
+           **           (2)
+           *            (1)
+           */
+           for(let row=1 ; row<=10 ; row++){
+                let star ="";
+                for(let col=row; col<=10 ; col++){
+                    star += "*";
+                }
+                console.log(star);
+           }
+        </script>
+    </body>
+</html>

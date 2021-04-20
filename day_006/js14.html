@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <link rel="stylesheet" href="./css01.css">
+    <body>
+        <script type="text/javascript">
+            "use strict"
+            //제어문 응용
+            document.write('</tabel>');
+            let html_99dan = '<table>';
+            for(let row=0; row<10; row++){
+                html_99dan +='<tr>';
+                for(let col=0; col<10; col++){
+                    if(col==0 && row==0){
+                        html_99dan += '<td></td>'
+                    }
+                    else if(row==0){
+                        html_99dan += '<td>' + 'X' + col + "</td>"; 
+                    }
+                    else if(col==0){
+                        html_99dan += '<td>' + row + '단' + '</td>';
+                    }
+                    else{
+                        html_99dan += '<td>' + col + "X" + row + "=" + col*row + '</td>';
+                    }
+                }
+                html_99dan += '</tr>';
+            }
+            html_99dan += '</table>'
+            document.write(html_99dan);
+        </script>
+    </body>
+</html>

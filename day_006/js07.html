@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+        <link rel="stylesheet" href="./css01.css">
+    <body>
+        <script type="text/javascript">
+            "use strict"
+            //tabel type 1 (for문 추가)
+            document.write('<table border="1" width="300">');
+            for(let i=1 ; i<=10 ; i++){
+                document.write('<tr>');
+                for(let j=1 ; j<=i; j++){
+                    document.write('<td>*</td>');
+                }
+                for(let k=1 ; k<=10-i ; k++){
+                    document.write('<td></td>');
+                }
+                document.write('</tr>');
+            }
+            document.write('</tabel>');
+            //table type 2 (if문 사용)
+            document.write('<table border="1" width="300">');
+            for(let row=1 ; row<=10 ; row++){
+                document.write('<tr>');
+                for(let col=1 ; col<=10; col++){
+                    if(col<=row){
+                        document.write('<td>*</td>');
+                    }
+                    else{
+                        document.write('<td></td>');
+                    }
+                }
+                document.write('</tr>');
+            }
+            document.write('</tabel>');
+            //table type 3 (제어부와 출력 부를 독립)
+            //제어
+            let html = '<table border="1" width="300">';
+            for(let row=1 ; row<=10 ; row++){
+                html +='<tr>';
+                for(let col=1 ; col<=10; col++){
+                    if(col<=row){
+                        html +='<td>*</td>';
+                    }
+                    else{
+                        html +='<td></td>';
+                    }
+                }
+                html +='</tr>';
+            }
+            html +='</tabel>';
+            //출력
+            document.write( html );
+        </script>
+    </body>
+</html>
