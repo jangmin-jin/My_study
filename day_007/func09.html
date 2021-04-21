@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            // 화살표 함수 or lambda
+            const func_11 = function(){
+                console.log('함수 호출 11');
+            };
+            const func_21 = function(param){
+                console.log('함수 호출 21', param)
+            };
+            const func_12 = () =>{
+                console.log('함수 호출 12');
+            };
+            const func_22 = param =>{
+                console.log('함수 호출 22', param);
+            };
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            'use strict'
+            func_11();
+            func_12();
+            func_21(10);
+            func_22(10);
+        </script>
+    </body>
+</html>

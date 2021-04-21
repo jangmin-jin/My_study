@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            // 세 개의 수를 입력 받아서 큰 수를 반환하는 익명함수(maxNumber)를 작성하시오.
+            let maxNumber = function(data_1, data_2, data_3){
+                if(data_1 >= data_2){
+                    if(data_1 >= data_3){
+                        maxValue = data_1;
+                    }else{
+                        maxValue = data_3;
+                    }
+                }else{
+                    if(data_2 >= data_3){
+                        maxValue = data_2;
+                    }else{
+                        maxValue = data_3;
+                    }
+                }
+                return maxValue;
+            }
+            /*
+            let maxNumber = function(data_1, data_2, data_3){
+                if(data_1 >= data_2 && data_1 >= data_3){
+                    maxValue = data_1;
+                }else if(data_2 >= data_3 && data_2 >= data_1){
+                    maxValue = data_2;
+                }else if(data_3 >= data_1 && data_3 >= data_2){
+                    maxValue = data_3;
+                }
+                return maxValue;
+            }
+            */
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            'use strict'
+            let maxValue = 0;
+            let data_1 = Number(prompt('1번 값 입력: '));
+            let data_2 = Number(prompt('2번 값 입력: '));
+            let data_3 = Number(prompt('3번 값 입력: '));
+            maxNumber(data_1, data_2, data_3);
+            document.write(maxValue);
+        </script>
+    </body>
+</html>

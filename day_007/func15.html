@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            'use strict'
+            // 확인/경고창 생성
+            //alert('Hello arlert');
+            //confirm('확인');
+            //확인 을 누를시 반응을 반환해줄 수 있는 코드
+            if(confirm('확인 ??')){
+                console.log('확인');
+            }else{
+                console.log('취소');
+            }
+            // 입력창 생성 및 입력값을 반환해줄 수 있는 코드
+            let input = prompt('Hello ECMAScript?', '초기값');
+            if (input) {
+                console.log('확인', input);
+            }else{
+                console.log('취소');
+            }
+        </script>
+    </body>
+</html>

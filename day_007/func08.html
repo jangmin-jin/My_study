@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            'use strict'
+            // 전역 변수
+            let sprots = '축구';
+            let music = '재즈';
+
+            // 중복 선언
+            // let sprots = '야구';
+
+            const get = function(){
+                // 지역 변수
+                let music = '클래식';
+                if(true){
+                    let music = '팝';
+
+                    console.log(sprots);
+                    console.log(music);  
+                }
+                console.log(sprots);
+                console.log(music);  
+            };
+            get(); // (축구, 팝), (축구, 클래식)
+
+            console.log(sprots); // 축구
+            console.log(music);  // 재즈
+        </script>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./css01.css">
+        <script>
+            function guguDan(dan){
+            //let guguDan = function(dan){ 으로도 가능
+                // 초기화 작업
+                let str = '';
+                str += '<table>';
+                for(let col=1; col<10; col++){
+                    str += '<tr>';
+                    str += '<td>' + dan + 'X' + col + '=' + (dan*col) + '</td>';
+                    str += '</tr>';
+                }
+                str += '</table>';
+                return str;
+            }
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            'use strict'
+            let dan = 1
+            document.write('<table>');
+            for(let row=1; row<=3; row++){
+                document.write('<tr>');
+                for(let col=1; col<=3; col++){
+                    document.write('<td>' + guguDan(dan) + '</td>');
+                    dan++;
+                }
+                document.write('</tr>');
+            }
+            document.write('</table>');
+        </script>
+    </body>
+</html>

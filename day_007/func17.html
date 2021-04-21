@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            'use strict'
+            // eval 함수 : 문자열을 수식화 시켜주는 함수
+            let expr_1 = '2 + 3';
+            console.log('결과 : ', expr_1);
+            console.log('결과 : ', eval(expr_1));
+
+            let expr_2 = '';
+            expr_2 += 'let num_1 = 10;';
+            expr_2 += 'let num_2 = 20;';
+            expr_2 += 'console.log(num_1 + num_2);';
+            console.log(expr_2);
+            eval(expr_2);
+        </script>
+    </body>
+</html>

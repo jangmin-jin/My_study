@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./css01.css">
+        <script>
+            //세 자리를 입력받아서 정렬하여 출력하는 sortNumber 함수 만들기
+            function sortNumber(data_1, data_2, data_3){
+                if(data_1 >= data_2 && data_1 >= data_3){
+                    if(data_2 >= data_3){
+                        firstValue = data_1;
+                        secondValue = data_2;
+                        thirdValue = data_3;
+                        return firstValue, secondValue, thirdValue;
+                    }else{
+                        firstValue = data_1;
+                        secondValue = data_3;
+                        thirdValue = data_2;
+                        return firstValue, secondValue, thirdValue;
+                    }
+                }else if(data_2 >= data_1 && data_2 >= data_3){
+                    if(data_1 > data_3){
+                        firstValue = data_2;
+                        secondValue = data_1;
+                        thirdValue = data_3;
+                        return firstValue, secondValue, thirdValue;
+                    }else{
+                        firstValue = data_2;
+                        secondValue = data_3;
+                        thirdValue = data_1;
+                        return firstValue, secondValue, thirdValue;
+                    }
+                }else if(data_3 >= data_1 && data_3 >= data_2){
+                    if(data_1 > data_2){
+                        firstValue = data_3;
+                        secondValue = data_1;
+                        thirdValue = data_2;
+                        return firstValue, secondValue, thirdValue;
+                    }else{
+                        firstValue = data_3;
+                        secondValue = data_2;
+                        thirdValue = data_1;
+                        return firstValue, secondValue, thirdValue;
+                    }
+                }
+            };
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            'use strict'
+            let firstValue, secondValue, thirdValue = 0;
+            let data_1 = Number(prompt('첫번째 숫자를 입력하세요'));
+            let data_2 = Number(prompt('두번째 숫자를 입력하세요'));
+            let data_3 = Number(prompt('세번째 숫자를 입력하세요'));
+
+            sortNumber(data_1, data_2, data_3);
+            document.write(' 1st :' + firstValue,' 2nd :' + secondValue, ' 3rd :' + thirdValue);
+        </script>
+    </body>
+</html>
