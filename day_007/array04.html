@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            'use strict'
+            const values = [1, 2, 3];
+            let one, two, three;
+            /*
+            one = values[0];
+            two = values[1];
+            three = values[2];
+            */
+            //배열의 분할 할당
+            [one, two, three] = values;
+            //선언과 동시에 할당
+            let [four, five] = values;
+            let six =  values[2];
+
+            console.log(one, two, three);
+            console.log(four, five);
+            console.log(six);
+        </script>
+    </body>
+</html>

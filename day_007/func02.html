@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            //함수 선언 구역   
+            function func_1(){
+                console.log('Hello function');
+            }  
+            //함수의 아규먼트, 파라메터
+            function func_2(data_1){
+                //지역변수
+                console.log('Hello function : ', data_1);
+            } 
+            function func_3(data_1, data_2, data_3){
+                console.log('Hello function : ', data_1, data_2, data_3);
+            }  
+            //값을 리턴해주는 함수
+            function func_4(data_1, data_2){
+                let sum = data_1 + data_2;
+                return sum;
+            }
+            //짝수와 홀수를 구별하는 함수
+            function evenodd(data_1){
+                if(data_1%2==0){
+                    console.log("짝수입니다.");
+                }else{
+                    console.log("홀수입니다.");
+                }
+            }
+            //리턴을 이용한 짝수 홀수 판독기
+            function evenodd_2(data_1){
+                result = '';
+                if(data_1%2==0){
+                    result = '짝수';
+                }else{
+                    result = '홀수';
+                }
+                return result;
+            }
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            'use strict'
+            //함수 호출
+            func_1();
+            func_2(10);
+            func_3(20, 30, 40);
+
+            let result = func_4(10, 20);
+            console.log('결과: ', result);
+
+            evenodd(2);
+            evenodd_2(3);
+            //result = evenodd_2(3);
+            console.log(result);
+        </script>
+    </body>
+</html>

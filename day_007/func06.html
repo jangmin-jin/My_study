@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            let rFunc = function(){
+                return function(){
+                    console.log('Hello Function');
+                }
+            }
+
+            let rFunc_2 = function(type){
+                if(type == 1){
+                    return function(){
+                        console.log('함수 선언 1 호출');
+                    };
+                }else{
+                    return function(){
+                        console.log('함수 선언 2 호출');
+                    };
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            'use strict'
+            let result = rFunc();
+            result();
+            console.log(typeof result);
+            console.log(result);
+
+            // 함수속 리턴되는 함수의 호출
+            rFunc()();
+
+            rFunc_2(0)();
+            rFunc_2(1)();
+            rFunc_2(2)();
+        </script>
+    </body>
+</html>

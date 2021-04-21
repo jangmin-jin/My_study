@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            // 익명 함수 선언
+            let func_1 = function(){
+                console.log('Hello Function');
+            };
+
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            'use strict'
+            func_1();
+
+            //할당 : 얕은 복사
+            //일급함수 : 선언적인 내용을 변수의 값으로 취금
+            let func_2 = func_1;
+            func_2();
+            console.log(func_2);
+            console.log(typeof func_2);
+        </script>
+    </body>
+</html>

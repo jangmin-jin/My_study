@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            // 내부 함수
+            let outer = function(){
+                // 외부 함수 부분
+                let inner_1 = function(){
+                    // 내부 함수 부분
+                    console.log('inner_1 실행');
+                }
+                let inner_2 = function(){
+                    // 내부 함수 부분
+                    console.log('inner_2 실행');
+                }
+                console.log('outer 실행');
+                inner_1();
+                inner_2();
+            }     
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            'use strict'
+            outer();
+        </script>
+    </body>
+</html>

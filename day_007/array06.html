@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            'use strict'
+            let arr_1 = ['music'];
+            console.log(arr_1);
+            console.log(arr_1.length);
+            console.log(arr_1[0]);
+            console.log(arr_1[0].length);
+            
+            //... : spread
+            let arr_2 = [...'music'];
+            console.log(arr_2);
+            console.log(arr_2.length);
+            console.log(arr_2[0]);
+            console.log(arr_2[0].length);
+
+            let arr_11 = [11, 12];
+            let arr_12 = [...arr_11];   //1차 배열
+            let arr_13 = [arr_11];      //2차 배열
+            console.log(arr_12);
+            console.log(arr_12.length);
+            console.log(arr_13);
+            console.log(arr_13.length);
+        </script>
+    </body>
+</html>

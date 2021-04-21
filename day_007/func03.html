@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            // 익명 함수 선언
+            let func_1 = function(){
+                console.log('Hello Function');
+            };
+
+            let func_2 = function(data_1, data_2){
+                let sum = data_1 + data_2;
+                return sum;
+            };
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            'use strict'
+            func_1();
+            // function 형태의 자료형
+            console.log(typeof func_1);
+            console.log(func_1);
+
+            console.log('결과: ', func_2(20, 30));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            'use strict'
+            /*
+                복사
+                    깊은 복사 - 값을 복사       -일반변수
+                    얖은 복사 - 주소(참조) 복사  -참조변수(배열, 객체 등)
+            */
+            let num_1=10;
+            let num_2=num_1;
+            num_2=20;
+            console.log(num_1);
+            console.log(num_2);
+
+            let arr_1=[1, 2, 3];
+            let arr_2=arr_1;
+            arr_2[0]=20;
+            console.log(arr_1);
+            console.log(arr_2);
+        </script>
+    </body>
+</html>

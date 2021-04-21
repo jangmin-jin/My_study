@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            'use strict'
+            let [one, two, three, four] = [1, 2, [3, 4]];
+            console.log(one, two, three, four);
+            console.log(three[0]);
+            console.log(three[1]);
+
+            let [one_1, two_1, [three_1, four_1]] = [1, 2, [3, 4]];
+            console.log(one_1, two_1, three_1, four_1);
+        </script>
+    </body>
+</html>

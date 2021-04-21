@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            'use strict'
+
+            let arr_1=[1, 2, 3];
+            let arr_2=Array(1, 2, 3);
+            let arr_3=new Array(1, 2, 3);
+
+            console.log(arr_1);
+            console.log(arr_2);
+            console.log(arr_3);
+
+            //for
+            for(let index=0; index<arr_1.length; index++){
+                console.log(arr_1[index]);
+            }
+            for(let index in arr_1){
+                console.log(arr_1[index]);
+            }
+
+            //for of
+            for(let value of arr_1){
+                console.log(value);
+            }
+
+            //2차원 배열
+            let arr_4 =[
+                [10, 20, 30],
+                [40, 50, 60],
+                [70, 80, 90]
+            ];
+            
+            //3차원 배열
+            let arr_5 =[
+            [ [1, 2, 3], [10, 20, 30] ],
+            [ [4, 5, 6], [40, 50, 60] ],
+            [ [7, 8, 9], [70, 80, 90] ]
+            ];
+            
+            console.log(arr_1);
+            console.log(arr_4);
+            console.log(arr_5);
+
+            for(let row=0; row<arr_4.length; row++){
+                for(let col=0; col<arr_4[row].length; col++){
+                    console.log(arr_4[row][col]);
+                }
+            }
+
+            for(let row=0; row<arr_5.length; row++){
+                for(let col=0; col<arr_5[row].length; col++){
+                    for(let div=0; div<arr_5[row][col].length; div++){
+                        console.log(arr_5[row][col][div]);
+                    }
+                }
+            }
+
+        </script>
+    </body>
+</html>
