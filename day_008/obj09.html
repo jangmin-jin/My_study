@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            // class
+            class Student {
+                // 생성자를 통해 내부 값 추가
+                constructor(name, kor, mat, eng, sci){
+                    this.name = name;
+                    this.kor = kor;
+                    this.mat = mat;
+                    this.eng = eng;
+                    this.sci = sci;
+                }
+                getSum(){
+                    return this.kor + this.mat + this.eng + this.sci ;
+                }
+            }
+            //let stu_1 = new Student();
+            let stu_1 = new Student('일론머스크', 100, 96, 95, 92);
+
+            console.log(typeof stu_1);
+            console.log(stu_1);
+
+            console.log(stu_1.name);
+            console.log(stu_1.getSum());
+        </script>
+    </body>
+</html>

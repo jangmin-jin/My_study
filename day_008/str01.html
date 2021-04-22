@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            let str_1 = 'Hello String!';                //typeof - string
+            let str_2 = new String('Hello String~')     //typeof - object
+
+            // String - 문자열 조작 방법(***)
+            // 문자열의 길이
+            console.log(str_1.length);
+            console.log(str_2.length);
+
+            // 문자열에서 문자 추출
+            let char_1 = str_1.charAt(0);
+            console.log(char_1);
+            console.log(str_1.charAt(0));
+            console.log(str_1[0]);
+            // 마지막 글자 가져오기 length-1
+            console.log(str_1.charAt(str_1.length-1));
+            
+            // 문자열에서 일부 문자열 추출 ('부터', '까지');
+            console.log(str_1.substr(0, 5));
+            console.log(str_1.substring(0, 5));
+            console.log(str_1.slice(0, 5));
+
+            // 위치 검색
+            console.log(str_1.indexOf('l'));        // 앞에서 부터 찾는다 : 2번째 위치
+            console.log(str_1.lastIndexOf('l'));    // 뒤에서 부터 찾는다 : 3번째 위치
+            console.log(str_1.lastIndexOf('z'));    // 문자열에 없는 글자 : -1값이 리턴
+
+            // 대소문자 변환
+            console.log(str_1.toUpperCase()); // HELLO STRING!
+            console.log(str_1.toLowerCase()); // hello string!
+            // 바로 선언과 동시에 써줄 수도 있다.
+            console.log('ABC'.toLowerCase());
+        </script>
+    </body>
+</html>

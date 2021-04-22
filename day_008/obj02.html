@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            'use strict'
+            // 객체 선언 및 초기화
+            let product_1 = {
+                name : '7D 건조 망고',
+                type : '당절임',
+                components : '망고, 설탕, 기타',
+                regioon : '필리핀'
+            };
+            // 얕은 복사
+            let product_2 = product_1;
+            console.log(product_2.name); // '7D 건조 망고'
+            console.log(product_1.name); // '7D 건조 망고'
+            // product_2의 내용을 변경하면 product_1의 내용도 바뀐다
+            product_2.name = '3D 건조 딸기'
+            console.log(product_2.name); // '3D 건조 딸기'
+            console.log(product_1.name); // '3D 건조 딸기'
+        </script>
+    </body>
+</html>

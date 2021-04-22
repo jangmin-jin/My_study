@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            let student ={
+
+            };
+            console.log(student);
+            // 동적 추가
+            student.name = '장선우';
+            student.hobby = '게임';
+            student.spect = '어린아이랑 잘 놀아줌';
+            student.hope = '어린이집 원장';
+
+            console.log(student);
+
+            //student.test = () => 도 가능하다.
+            student.test = function(){
+                console.log('원장선생님 호출');
+            }
+
+            console.log(student);
+            student.test();
+        </script>
+    </body>
+</html>

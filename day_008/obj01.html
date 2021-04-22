@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            'use strict'
+            let arr_1 = []; // 배열
+            let obj_1 = {}; // 객체
+            console.log(typeof arr_1); // object 배열도 객체 취급
+            console.log(typeof obj_1); // object
+
+            // 객체 선언 및 초기화
+            let product_1 = {
+                name : '7D 건조 망고',
+                type : '당절임',
+                components : '망고, 설탕, 기타',
+                regioon : '필리핀'
+            };
+            console.log(product_1);
+            // 객체 접근 방법
+            console.log(product_1['name']);
+            // . : 객체참조 연산자
+            console.log(product_1.name);
+            // 값 변경
+            product_1.name = '3D 건조 딸기';
+            console.log(product_1.name);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            'use strict'
+            // 객체 선언 및 초기화
+            let product_1 = {
+                name : '7D 건조 망고',
+                type : '당절임',
+                components : '망고, 설탕, 기타',
+                regioon : '필리핀',
+                // 메서드
+                eat : function(){
+                    console.log('야미 ~');
+                },
+                // 화살표 메서드
+                test: () =>{
+                    console.log('어디 싱싱한지 볼까 ~?');
+                }
+            };
+            product_1.eat();
+            product_1.test();
+
+            let product_2 = product_1;
+            
+            product_2.test();
+            console.log(product_2);
+        </script>
+    </body>
+</html>

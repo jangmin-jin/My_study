@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            // 생성자
+            let makeStudent = function(name, kor, mat, eng, sci){
+                this.name = name;
+                this.kor = kor;
+                this.mat = mat;
+                this.eng = eng;
+                this.sci = sci;
+
+                this.getSum = function(){
+                    return this.kor + this.mat + this.eng + this.sci;
+                };
+            };
+
+            // 생성 및 초기화
+            // new 메모리 생성연산자
+            // 객체변수 / 참조변수
+            let stu_1 = new makeStudent('장자인', 95, 79, 92, 86);
+            let stu_2 = new makeStudent('전민규', 62, 73, 64, 55);
+
+            console.log(stu_1);
+            console.log(stu_2);
+
+            console.log(stu_1.getSum());
+            console.log(stu_2.getSum());
+
+            console.log(stu_1 instanceof makeStudent);
+            console.log(stu_1 instanceof Number);
+        </script>
+    </body>
+</html>

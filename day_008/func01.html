@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            'use strict'
+
+            let vfunc_1 = function(data_1, data_2){
+                console.log(data_1, data_2);
+            };
+
+            vfunc_1(10);
+
+            //가변인자 함수
+            let vfunc_2 = function(){
+                // arguments(예약어)
+                // console.log(arguments);
+                // console.log(arguments.length);
+                for(let i=0; i<arguments.length; i++){
+                    console.log(arguments[i]);
+                }
+            };
+            vfunc_2(10);
+            vfunc_2(10, 20);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            'use strict'
+            let product_1 = {
+                name : '7D 건조 망고',
+                type : '당절임',
+                components : '망고, 설탕, 기타',
+                regioon : '필리핀',
+                // this. : 자기 참조
+                eat : function(){
+                    console.log( this.name + ' 무지 달다 ~');
+                },
+                test: () =>{
+                    console.log('어디 싱싱한지 볼까 ~?');
+                }
+            };
+            product_1.eat(); // '7D 건조 망고 무지 달다 ~'
+            
+            let output = '';
+            for(let key in product_1){
+                output += '*' + key + ' : ' + product_1[key] + '\n';
+            };
+            console.log(output);
+        </script>
+    </body>
+</html>
