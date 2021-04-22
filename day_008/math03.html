@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./css008.css">
+        <script>
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            //로또 번호 생성기
+            document.write('<table>')
+                for(i=1; i<=5; i++){
+                    document.write('<tr>');
+                    for(j=1; j<=7; j++){
+                        if(j==1){
+                            document.write('<td>' + i + ' 회</td>');
+                        }else{
+                            document.write('<td>'+ (parseInt(Math.random()*45)+1) +'</td>')
+                        }
+                    }
+                    document.write('</tr>');
+                }
+            document.write('</table>');
+        </script>
+    </body>
+</html>

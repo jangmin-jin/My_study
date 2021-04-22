@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            // 첫 글자 대문자 변환 로직 함수 화
+            let initcap = function(sentence){
+                let arr_1 = sentence.split(' ');
+                let result = '';
+                for(let i in arr_1){
+                    result += arr_1[i].substring(0, 1).toUpperCase() + arr_1[i].substring(1) + ' ';
+                }
+                return result;
+            }
+            // 맨 앞 한글자만 변경해주는 함수
+            let initcapFirst = function(sentence){
+                let result = '';
+                result += sentence.substring(0, 1).toUpperCase(0) + sentence.substring(1);
+                return result;
+            }
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            let words = 'hong gil dong';
+            // 단어의 분리 ' '공백 기준으로 분리
+            let arr_1 = words.split(' ');
+            let result = '';
+            for(let i in arr_1){
+                result += arr_1[i].substring(0, 1).toUpperCase() + arr_1[i].substring(1) + ' ';
+            }
+            console.log(result);
+
+            // 함수를 이용하여 변환
+            console.log(initcap('hong gil dong'));
+            console.log(initcap('jangmin jin'));
+            
+            // 맨앞 한글자만 변경
+            let name = 'hong gil dong';
+            let reName = '';
+            reName += name.substring(0, 1).toUpperCase() + name.substring(1);
+            console.log(reName);
+            console.log(initcapFirst('jangmin jin'));
+        </script>
+    </body>
+</html>

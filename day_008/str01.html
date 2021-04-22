@@ -39,6 +39,27 @@
             console.log(str_1.toLowerCase()); // hello string!
             // 바로 선언과 동시에 써줄 수도 있다.
             console.log('ABC'.toLowerCase());
+
+            // 문자열 치환
+            console.log(str_1.replace('Hello', '안녕하세요~'));
+            let str_3 = 'Hello String@Hello String@Hello String@';
+            console.log(str_3.replace('Hello','안뇽~'));   // 처음 발견된 하나만 바꾼다
+            console.log(str_3.replace(/Hello/g,'안뇽~'));  // 모든 문자를 바꾼다
+
+            // 문자열 결합
+            console.log(str_1.concat(1, 2, 3, '꽐루'));
+
+            // 양끝의 공백 제거
+            let str_4 = '     aaaa bbbb cccc     ';
+            console.log(str_4, str_4.length);
+            console.log(str_4.trim(), str_4.trim().length);
+
+            // 구분자를 이용하여 데이터 나누기
+            let str_5 = '사과 딸기 수박 참외';
+            let arr_1 = str_5.split(' ');
+            for(let i in arr_1){
+                console.log(arr_1[i]);
+            }
         </script>
     </body>
 </html>
