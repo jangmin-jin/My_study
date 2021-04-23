@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            // DOM - location
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+           // console.log(location.href); //http://127.0.0.1:8080/day_009/location01.html 현재 주소
+           // location.href = 'https://www.daum.net'; // 자동 이동 시켜버림
+           // location 기능 함수 생성
+           const goUrl = function(){
+               location.href='https://www.daum.net';
+           }
+        </script>
+        <a href="https://www.daum.net">다음 바로가기 1</a><br>
+        <a href="javascript:goUrl()">다음 바로가기 2</a><br>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            // DOM - window
+            // 새창 띄우기 함수화
+            let child;
+            const winOpen = function(url){
+                let option = 'top=100, left=500, width=640, height=960';
+                child = open(url, 'winopen', option);
+            }
+            // 뜬 창 닫아주기
+            const winClose = function(){
+                child.close();
+            }
+            // 5초 뒤에 창 자동으로 닫기
+            const winTimeClose = function(){
+                setTimeout(function(){
+                    child.close();
+                },5000);
+            }
+            // 하기 함수는 내 소유 문서만 가능함. naver나 daum은 못함
+            // 창 움직이기
+            const winMove = function(){
+                child.moveBy(-100, -100);
+            }
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+        </script>
+        <!-- 
+            html의 동작및 문장에 의해서도 ECMAScript 실행(함수 호출) 가능 
+            링크 클릭 : 이벤트
+        -->
+        <a href="javascript:winOpen('http://www.naver.com')">네이버 바로가기</a><br>
+        <a href="javascript:winOpen('http://www.daum.net')">다음 바로가기</a><br>
+        <a href="javascript:winOpen('./jumin04.html')">주민번호 검사 바로가기</a><br>
+        <a href="javascript:winClose()">창닫기</a><br>
+        <a href="javascript:winMove()">창 움직이기</a><br>
+        <a href="javascript:winTimeClose()">5초 뒤에 창닫기</a><br>
+    </body>
+</html>

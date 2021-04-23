@@ -10,7 +10,7 @@
     </head>
     <body>
         <script type="text/javascript">
-            //로또 번호 생성기 배열 응용편
+        //로또 번호 생성기 배열 응용편
             for(i=1; i<=5; i++){
                 let lotto = new Array();
                 for(j=1; j<=6; j++){
@@ -22,6 +22,11 @@
                         j--;    // 중복된 수가 빈값이 되면 안되니까 다시 한번 더 돌려야 한다
                     }
                 }
+                // 보기 편하게 오름차순 정렬 실행
+                lotto.sort(function(left, right){
+                    return left - right;
+                })
+                // 로또 번호 출력 : 5줄 5000원 어치
                 console.log(lotto);
             }
             //console.log(arr_1.indexOf(4));      // 2 (0~3에서 3번째 위치에 있음)

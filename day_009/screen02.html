@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            // 화면 중간에 새로운 창 띄어주기
+            let child;
+            const winOpen = function(url){
+                let width = 500;
+                let height = 500;
+                let top = (screen.height/2)-(height/2);
+                let left = (screen.width/2)-(width/2);
+                //let option = 'top='+ top + ',left=' + left + ',width=' + width + ',height=' + height;
+                // template 문자열로도 쓸수 있음 `` 사이에 변수만 ${}로 감싸주자
+                let option = `top=${top},left=${left},width=${width},height=${height}`;
+                child = open(url, 'winOpen', option);
+            };
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+        </script>
+        <a href="javascript:winOpen('http://m.daum.net')">다음 바로가기</a><br>
+    </body>
+</html>

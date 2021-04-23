@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            // Set : set 형식의 obj
+            let set = new Set();
+            // .add : set에 자료 추가 (중복데이터는 안받는다)
+            set.add('축구');
+            set.add('야구');
+            set.add('볼링');
+            set.add('농구');
+            set.add('농구');     // 중복데이터는 안받는다
+            set.add('골프');
+            console.log(set);   // {"축구", "야구", "볼링", "농구", "골프"}
+            console.log(set.has('농구'));   // true
+            console.log(set.has('족구'));   // false
+
+            // keys, values, delete, clear 등등도 가능
+        </script>
+    </body>
+</html>

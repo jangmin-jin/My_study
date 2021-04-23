@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            // DOM - window
+            let output = '';
+            for (let key in window){
+                if(key != 'external'){
+                    output += '* ' + key + ': ' + window[key] + '\n';
+                }
+            }
+            console.log(window.screenTop);   // screen의 top 위치
+            console.log(window.screenLeft);  // screen의 left 위치
+            //  console.log(output);   // 전체 요소 확인
+
+            // alert, confirm, prompt (사실 이게 window.'선언'으로 이루어진 애들이었음)
+            window.alert('알림창이여');
+            alert('알림창인디요');      // 결과는 같다.
+        </script>
+    </body>
+</html>

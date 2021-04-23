@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            let map = new Map();
+            console.log(map);
+
+            // set : 요소 set
+            map.set('one', 100);
+            map.set('two', 200);
+            map.set('three', 300);
+            // 객체 형태 set (오브젝트와 함수 넣기)
+            map.set('obj', {});
+            map.set('func', function(){console.log('1')});
+            console.log(map);
+
+            // get : 데이터 key를 지정하여 value를 가져올 수 있다
+            console.log(map.get('one'));   // 100
+            console.log(map.get('two'));   // 200
+
+            console.log(map.get('func'));  // {console.log('1')}
+            let func = map.get('func');
+            func();                        // 1
+
+            // .keys() : key값만 가져온다. (이터레이터 데이터 형식)
+            let keys = map.keys();
+            // .next() : 다음 데이터를 읽어온다
+            console.log(keys.next().value);     // one
+            console.log(keys.next().value);     // two
+            console.log(keys.next());           // {value: "three", done: false}
+
+            // .values : value값만 가져온다.
+            let values = map.values();
+            console.log(values.next().value);   // 100
+            console.log(values.next().value);   // 200
+        </script>
+    </body>
+</html>

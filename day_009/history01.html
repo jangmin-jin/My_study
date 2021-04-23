@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            // DOM - history
+            const goUrl = function(){
+                location.href = 'https://www.daum.net';
+            };
+            const backUrl = function(){
+                // 이전 페이지로 돌아간다, back 버튼하고 동일한 역할
+                history.back();
+            }
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+        </script>
+        <a href="javascript:goUrl()">다음 바로가기</a><br>
+        <a href="javascript:backUrl()">이전 바로가기</a>
+    </body>
+</html>

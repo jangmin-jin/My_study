@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            // DOM - navigator : browser 정보
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+        // navigator : browser 정보
+           let output = '';
+           // browser의 정보를 다 확인 할 수 있다.
+           for(let key in navigator){
+               output += '* ' + key + ': ' + navigator[key] + '\n';
+           }
+           //console.log(output);
+           console.log(navigator.appVersion);  // 윈도우 관련 정보, 웹 브라우저 관련 정보등 버전 정보 표기
+           console.log(navigator.userAgent);   // 에이전트 정보 표기
+           console.log(navigator.platform);    // 플랫폼 명시
+        </script>
+    </body>
+</html>
