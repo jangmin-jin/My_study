@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="">
+        <!-- 외부 파일로 빼내서 사용하기 -->
+        <script type="text/javascript" src="./util.js">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            // 주민 번호 검사기
+            let str_Jumin = prompt('주민번호를 입력하세요.', 'xxxxxx-xxxxxxx');
+            if(checkJumin(str_Jumin)){
+                document.write('맞습니다');
+            }else{
+                document.write('틀립니다');
+            }
+        </script>
+    </body>
+</html>

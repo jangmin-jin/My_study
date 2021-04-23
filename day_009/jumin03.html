@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="">
+        <script>
+            // 객체로 만들어 버림
+            const Jumin = function(str_Jumin){
+                this.str_Jumin = str_Jumin;
+                this.checkJumin = function(){
+                    let arr_Jumin = str_Jumin.split('-');
+                    let arr_JuminSplit = [...arr_Jumin[0],...arr_Jumin[1]];
+                    for(let i=0; i<=12; i++){
+                    arr_JuminSplit[i] = Number(arr_JuminSplit[i]); 
+                    }
+                    let value = 0;
+                    for(let i=0; i<12; i++){
+                        if(i<8){
+                            value += arr_JuminSplit[i]*(i+2);
+                        }
+                        else{
+                            value += arr_JuminSplit[i]*(i-6);
+                        }
+                    }
+                    if(((11-(value%11))%10)==arr_JuminSplit[12]){
+                        return true;                
+                    }else{
+                        return false;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            let jumin = new Jumin(prompt('주민번호를 입력하세요.', 'xxxxxx-xxxxxxx'));
+            if(jumin.checkJumin()){
+                document.write('맞습니다');
+            }else{
+                document.write('틀립니다');
+            }
+        </script>
+    </body>
+</html>

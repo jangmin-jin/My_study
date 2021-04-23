@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            //로또 번호 생성기 배열 응용편
+            for(i=1; i<=5; i++){
+                let lotto = new Array();
+                for(j=1; j<=6; j++){
+                    let num = (parseInt(Math.random()*45)+1);
+                    // indexOf가 -1이 나온다는 이야기는 그 수가 새로운 수라는 것
+                    if(lotto.indexOf(num)==-1){
+                        lotto.push(num);
+                    }else{
+                        j--;    // 중복된 수가 빈값이 되면 안되니까 다시 한번 더 돌려야 한다
+                    }
+                }
+                console.log(lotto);
+            }
+            //console.log(arr_1.indexOf(4));      // 2 (0~3에서 3번째 위치에 있음)
+        </script>
+    </body>
+</html>

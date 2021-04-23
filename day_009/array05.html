@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="">
+        <script>
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            // from : 각 요소별 배열화 시켜주는 기능
+            let str = Array.from('ABC');
+            let arr = Array.from({0: 'Zero', 1: 'One', length: 2});
+            console.log(str); // ["A", "B", "C"]
+            console.log(arr); // ["Zero", "One"]
+
+            arr = Array.of(1, 2, 3);
+            console.log(arr); // [1, 2, 3]
+
+            // copyWithin : 한번 반복해서 덮어 씌어 준다
+            let arr_1 = new Array(1, 2, 3, 4, 5);
+            console.log(arr_1.copyWithin(3));       //[1, 2, 3, 1, 2] 3번째 위치에서부터 처음부터 반복한 데이터를 덮어씌움
+            console.log(arr_1);                     //[1, 2, 3, 1 ,2] 바뀌어 있음
+            let arr_2 = new Array(1, 2, 3, 4, 5);
+            console.log(arr_2.copyWithin(1, 3));    //[1, 4, 5, 4, 5] 1번째 위치에서 3번째 위치이후의 값을 덮어 씌어줌
+            
+            // fill : 해당 값으로 싹 초기화 시켜 버린다.
+            let one = new Array(1, 2, 3);
+            console.log(one.fill(7));               //[7, 7, 7]
+            console.log(one.fill(9, 0, 1));         //[9, 7, 7] 0번째 부터 1번째 까지 9로 채운다.
+        </script>
+    </body>
+</html>
