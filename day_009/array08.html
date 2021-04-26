@@ -16,22 +16,17 @@
         for(let i=0; i<=4; i++){
             document.write('<tr>');
             let lotto = new Set();
-            for(let j=0; j<=5; j++){
+            while(Number(lotto.size) <= 6){
                 let lottoNum = parseInt(Math.random()*45)+1;
-                    if(lotto.has(lottoNum)==true){
-                        j--;
-                    }else{
-                        lotto.add(lottoNum);
-                    }
-                }
-            console.log(lotto);
-            lotto.forEach(function(lottoSetValue){
+                lotto.add(lottoNum);
+            }
+            lotto.forEach(function(value){
                 document.write('<td>');
-                document.write(lottoSetValue);
+                document.write(value);
                 document.write('</td>');
             })
             document.write('</tr>');
-        }
+            }
         document.write('</table>');
         </script>
     </body>
