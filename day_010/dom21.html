@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type="text/javascript">
+            // CSS를 바꾸는 로직
+            // style. 으로 접근 한다.
+            const addStyle = () =>{
+                let h_1 = document.getElementById('h_1');
+                h_1.style.border = '1px solid red';
+                h_1.style.color = 'orange';
+            };
+            // 지우는 것도 마찬가지로 선언후 빈값으로 초기화 해준다
+            const removeStyle = () =>{
+                let h_1 = document.getElementById('h_1');
+                h_1.style.border = '';
+                h_1.style.color = '';
+            };
+        </script>
+    </head>
+    <body>
+        <input type="button" value="스타일 추가" onclick="addStyle()"><br>
+        <input type="button" value="스타일 추가" onclick="removeStyle()"><br>
+        <hr>
+        <div id="div">
+            <h1 id="h_1">Header 1</h1>
+            <h1 id="h_2">Header 2</h1>
+        </div>
+    </body>
+</html>

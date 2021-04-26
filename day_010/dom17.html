@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type="text/javascript">
+            // 구구단 한줄 출력하기
+            const insertTags = (dan) =>{
+                let output = '<table border="1" width="200">';
+                output += '<tr>';
+                output += '<td>';
+                    for(let i=1; i<=9; i++){
+                        output += dan + 'X' + i + "=" + (dan*i) + '<br>';
+                    }
+                output += '</td>';
+                output += '</tr>';
+                output += '</table>';
+
+                let div = document.getElementById('div');
+                div.innerHTML = output;
+            };
+        </script>
+    </head>
+    <body>
+        <input type="button" value="tag 추가" onclick="insertTags(3)"><br>
+        <hr>
+        <div id="div">
+        </div>
+    </body>
+</html>

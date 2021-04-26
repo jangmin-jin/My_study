@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type="text/javascript">
+            const insertTag = () =>{
+                // 헤더 선언과 내용 추가
+                let header = document.createElement('h1');
+                let textNode = document.createTextNode('Hello Dom');
+
+                // appendChild : 자식 추가
+                // <h1>Hello Dom</h1>
+                header.appendChild(textNode);
+                document.getElementById('div').appendChild(header);
+            };
+        </script>
+    </head>
+    <body>
+        <input type="button" value="tag 추가" onclick="insertTag()"><br>
+        <hr>
+        <div id="div"></div>
+    </body>
+</html>

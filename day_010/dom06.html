@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type="text/javascript">
+            const checkfrm = () =>{
+                // document.frm.data_1.value
+                let data_1 = document.frm.data_1.value;
+                // if(data_1.length == 0)으로 표현 가능
+                if(data_1 == ''){
+                    alert('값이 입력되지 않았습니다.');
+                }else{
+                    document.frm.data_2.value = data_1 ;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="test.jsp" method="GET" name="frm">
+            데이터 1 :<input type="text" name="data_1"><br>
+            데이터 2 :<input type="text" name="data_2"><br>
+            <input type="button" value="검사 하기" onclick="checkfrm()">
+        </form>
+
+        <!-- <a href="javascript:checkfrm()">form 문서에 접근</a> -->
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>

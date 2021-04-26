@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type="text/javascript">
+            const viewTags = () =>{
+                // id에 의한 접근 - 한개의 태그만 접근
+                let h1 = document.getElementById('h1');
+                console.log(h1);        // <h1 id="h1">Header 1</h1>
+                console.log(typeof h1); // object
+                // tagname에 의한 접근 - 여러개의 태그에 접근
+                let h1s = document.getElementsByTagName('h1');
+                console.log(typeof h1s); // object
+                console.log(h1s.length); // 3
+                for(let i=0; i<h1s.length; i++){
+                    console.log(h1s[i]);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" value="tag 보기" onclick="viewTags()"><br>
+        <hr>
+        <h1 id="h1">Header 1</h1>
+        <h1 id="h2">Header 2</h1>
+        <h1 id="h3">Header 3</h1>
+        <h2 id="h3">Header 4</h2>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type="text/javascript">
+        // 비밀번호 검사하기
+            const checkfrm = () =>{
+                // if(document.frm.pwd_1.value == document.frm.pwd_2.value){
+                //     alert('같습니다');
+                // }else{
+                //     alert('서로 틀립니다')
+                // }
+                console.log(document.frm.tx.value)
+            }
+        </script>
+    </head>
+    <body>
+        <form action="test.jsp" method="GET" name="frm">
+            데이터 1 : <input type="text" name="data_1"><br>
+            데이터 2 : <input type="text" name="data_2"><br>
+            <!-- 글자 안보이게 가려놓음 -->
+            비밀번호 1 : <input type="password" name="pwd_1"><br>
+            비밀번호 1 : <input type="password" name="pwd_2"><br>
+
+            <textarea cols="20" row="5" name="tx"></textarea><br>
+            <input type="button" value="검사하기" onclick="checkfrm()"><br>
+        </form>
+    </body>
+</html>

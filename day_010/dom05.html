@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type="text/javascript">
+            // 문서 전체를 dom tree로 만든 후 ECMAScript 실행
+            // 동작 시점 - 이벤트 설정
+
+            // 자동 실행
+            window.onload = () =>{
+                console.log(document.frm2);
+                console.log(document.frm2.action);
+                };
+            // 수동 실행
+            const checkfrm = () =>{
+                console.log(document.frm2);
+                console.log(document.frm2.action);
+            }
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+        </script>
+        <form action="test1.jsp" method="GET" name="frm1">폼1</form>
+        <form action="test2.jsp" method="POST" name="frm2">폼2</form>
+
+        <a href="javascript:checkfrm()">form 문서에 접근</a>
+    </body>
+</html>

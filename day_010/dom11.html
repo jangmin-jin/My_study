@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type="text/javascript">
+            const checkfrm = () =>{
+                for(let i=0; i<document.frm.ch1.length; i++){
+                    if(document.frm.ch1[i].checked == true){
+                        document.frm.ch2[i].checked = true;
+                    }
+                }
+            }
+            const emptyfrm = () =>{
+                for(let i=0; i<document.frm.ch1.length; i++){
+                    document.frm.ch1[i].checked = false;
+                    document.frm.ch2[i].checked = false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="test.jsp" method="GET" name="frm">
+            <table border="1" width="600">
+                <tr>
+                    <td>
+                        <input type="checkbox" name="ch1" value="사과">사과<br>
+                        <input type="checkbox" name="ch1" value="참외">참외<br>
+                        <input type="checkbox" name="ch1" value="수박">수박<br>
+                        <input type="checkbox" name="ch1" value="딸기">딸기<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="복사하기" onclick="checkfrm()"><br>
+                        <input type="button" value="지우기" onclick="emptyfrm()"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="ch2" value="사과">사과<br>
+                        <input type="checkbox" name="ch2" value="참외">참외<br>
+                        <input type="checkbox" name="ch2" value="수박">수박<br>
+                        <input type="checkbox" name="ch2" value="딸기">딸기<br>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style type="text/css">
+            div{
+                width: 300px;
+                height: 300px;
+                border: 1px solid black;
+            }
+        </style>
+        <script type="text/javascript">
+            // body를 다 읽고나서 진행되어야 하기 때문에
+            // window.onload를 사용해야 한다.
+            window.onload = () =>{
+                document.getElementById('div').onclick = (e) =>{
+                    //e = 이벤트 상황
+                    console.log(e.x);
+                    console.log(e.y);
+                    // console.log(e.clientX);
+                    // console.log(e.clientY);
+
+                    // 무슨 키를 눌렀는지 알수 있다.(boolean)
+                    console.log(e.altKey);
+                    console.log(e.shiftKey);
+                    console.log(e.ctrlKey);
+
+                    // 어떤 버튼으로 눌렀는가 (number)
+                    console.log(e.button);
+                };
+            };
+        </script>
+    </head>
+    <body>
+        <div id="div">이벤트 발생</div>
+    </body>
+</html>

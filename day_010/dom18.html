@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type="text/javascript">
+            // 구구단 출력하기
+            const showGugudan = () =>{
+                let startDan = Number(document.frm.startDan.value);
+                let endDan = Number(document.frm.endDan.value);
+                let output = '<table border="1" height="100">';
+                    for(let dan=startDan; dan<=endDan; dan++){
+                        output += '<tr>';
+                        for(let num1To9=1; num1To9<=9; num1To9++){
+                        output += '<td>' + dan + 'X' + num1To9 + "= " + (dan*num1To9) + '</td>';
+                        }
+                        output += '</tr>';
+                    }
+                output += '</table>';
+                let div = document.getElementById('div');
+                div.innerHTML = output;
+            };
+        </script>
+    </head>
+    <body>
+        <form name="frm">
+            시작단 : <input type="text" name="startDan">
+            ~
+            끝단 : <input type="text" name="endDan">
+            <input type="button" value="구구단 보기" onclick="showGugudan()"><br>
+        </form>
+        <hr>
+        <div id="div"></div>
+    </body>
+</html>

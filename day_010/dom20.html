@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type="text/javascript">
+            const showAttribute = () =>{
+                // 속성 값에 접근 가능
+                let img = document.getElementById('img_1');
+                console.log(img.getAttribute('src'));
+                console.log(img.getAttribute('width'));
+                console.log(img.getAttribute('height'));
+            };
+            const insertAttribute = () =>{
+                let img = document.createElement('img');
+                // img.setAttribute('src','./images/Jellyfish.jpg');
+                // img.setAttribute('width','500');
+                // img.setAttribute('height','350');
+
+                img.src = './images/Jellyfish.jpg';
+                img.width = 500;
+                img.height = 350;
+
+                // let div = document.getElementById('div');
+                div.appendChild(img);
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" value="속성 보기" onclick="showAttribute()"><br>
+        <input type="button" value="속성 추가" onclick="insertAttribute()"><br>
+        <hr>
+        <img src="./images/Desert.jpg" id="img_1" width="500" height="350">
+        <div id="div"></div>
+    </body>
+</html>

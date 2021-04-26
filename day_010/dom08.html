@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type="text/javascript">
+        // 주민번호 판단 로직
+            const checkJumin = () =>{
+                let juminFrontNum = document.frm.data_1.value;
+                let juminBackNum = document.frm.data_2.value;
+                if(juminFrontNum.length !== 6 || juminBackNum.length !==7){
+                    alert('올바르게 입력해 주십시오');
+                }else{
+                    let juminFrontArr = juminFrontNum.split('');
+                    let juminBackArr = juminBackNum.split('');
+                    const checkFront = [2, 3, 4, 5, 6, 7];
+                    const checkBack = [8, 9, 2, 3, 4, 5];
+                    let checkValue = 0;
+                    for(let i=0; i<6; i++){
+                        checkValue += juminFrontArr[i]*checkFront[i] + juminBackNum[i]*checkBack[i];
+                    }
+                    if(((11-(checkValue%11))%10) == juminBackNum[6]){
+                        document.frm.result.value = '주민 번호 형식이 올바릅니다';
+                    }else{
+                        document.frm.result.value = '주민 번호 형식이 올바르지 않습니다';
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="test.jsp" method="GET" name="frm">
+            주민번호 입력<br>
+            <input type="text" name="data_1">-
+            <input type="text" name="data_2"><br>
+            <input type="button" value="주민등록번호 검사" onclick="checkJumin()"><br>
+            결과 : <input type="text" name="result">
+        </form>
+    </body>
+</html>

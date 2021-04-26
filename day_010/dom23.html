@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type="text/javascript">
+            // body를 다 읽고나서 진행되어야 하기 때문에
+            // window.onload를 사용해야 한다.
+            window.onload = () =>{
+                // 동적 이벤트 적용
+                let btn_1 = document.getElementById('btn_1');
+                btn_1.onclick = () =>{
+                    alert("이벤트 발생 1");
+                };
+                document.getElementById('btn_2').onclick = () =>{
+                    alert("이벤트 발생 2")
+                    document.getElementById('btn_2').onclick = null;
+                };
+                document.getElementById('btn_3').onclick = () =>{
+                    alert("이벤트 발생 3")
+                };
+                document.getElementById('div').onclick = () =>{
+                    alert("이벤트 발생 4")
+                };
+            };
+        </script>
+    </head>
+    <body>
+        <!-- 버튼을 통한 이벤트 발생 -->
+        <input type="button" id="btn_1" value="이벤트 발생 1"><br><br>
+        <input type="button" id="btn_2" value="이벤트 발생 2"><br><br>
+        <button id="btn_3" >이벤트 발생 3</button>
+        <!-- 버튼이 아니어도 이벤트는 발생 -->
+        <div id="div">이벤트 발생 4</div>
+    </body>
+</html>

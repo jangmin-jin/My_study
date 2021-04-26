@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script type="text/javascript">
+        // 주민번호 판단 로직
+            const checkJumin = () =>{
+                let juminFrontArr = document.frm.frontNum.value.split('');     // string
+                let juminBackArr = document.frm.backNum.value.split('');       // string
+                let checkTextFrontArr = new Array;
+                let checkTextBackArr = new Array;
+                for(i=0; i<juminFrontArr.length; i++){
+                    juminFrontArr[i] = Number(juminFrontArr[i]);     // number
+                    checkTextFrontArr[i] = isNaN(juminFrontArr[i]);  // boolean
+                }
+                for(i=0; i<juminBackArr.length; i++){
+                    juminBackArr[i] = Number(juminBackArr[i]);       // number
+                    checkTextBackArr[i] = isNaN(juminBackArr[i]);    // boolean
+                }
+                if(juminFrontArr.length !== 6 || juminBackArr.length !==7){
+                    alert('자리수가 올바르지 않습니다');
+                }else if(checkTextFrontArr[0]||checkTextBackArr[0]||checkTextFrontArr[1]||checkTextBackArr[1]){
+                    alert('문자열은 입력할 수 없습니다.');
+                }else if(checkTextFrontArr[2]||checkTextBackArr[2]||checkTextFrontArr[3]||checkTextBackArr[3]){
+                    alert('문자열은 입력할 수 없습니다.');
+                }else if(checkTextFrontArr[4]||checkTextBackArr[4]||checkTextFrontArr[5]||checkTextBackArr[5]||checkTextBackArr[6]){
+                    alert('문자열은 입력할 수 없습니다.');
+                }else{
+                    const checkFront = [2, 3, 4, 5, 6, 7];
+                    const checkBack = [8, 9, 2, 3, 4, 5];
+                    let checkValue = 0;
+                    for(let i=0; i<6; i++){
+                        checkValue += juminFrontArr[i]*checkFront[i] + juminBackArr[i]*checkBack[i];
+                    }
+                    if(((11-(checkValue%11))%10) == juminBackArr[6]){
+                        document.frm.result.value = '주민 번호 형식이 올바릅니다';
+                    }else{
+                        document.frm.result.value = '주민 번호 형식이 올바르지 않습니다';
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="test.jsp" method="GET" name="frm">
+            주민번호 입력<br>
+            <input type="text" name="frontNum">-
+            <input type="text" name="backNum"><br>
+            <input type="button" value="주민등록번호 검사" onclick="checkJumin()"><br>
+            결과 : <input type="text" name="result">
+        </form>
+    </body>
+</html>

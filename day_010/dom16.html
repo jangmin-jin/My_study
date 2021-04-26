@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type="text/javascript">
+            // tag 추가하기
+            const insertTags = () =>{
+                // let output = '<ul>';
+                // output += '<li>사과</li>'
+                // output += '<li>참외</li>'
+                // output += '<li>수박</li>'
+                // output += '<li>딸기</li>'
+                // output += '</ul>'
+
+                let output = `<ul>
+                <li>사과</li>
+                <li>참외</li>
+                <li>수박</li>
+                <li>딸기</li>
+                </ul>`;
+
+                let div = document.getElementById('div');
+                div.innerHTML = output; // 랜더링 o
+                // div.textContent = output; // 랜더링 x
+            };
+        </script>
+    </head>
+    <body>
+        <input type="button" value="tag 추가" onclick="insertTags()"><br>
+        <hr>
+        <div id="div">
+        </div>
+    </body>
+</html>

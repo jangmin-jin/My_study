@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type="text/javascript">
+        // 첫 글자를 대문자로 바꾸어 주는 로직
+            const checkfrm = () =>{
+                if(document.frm.data_1.value == 0){
+                    alert('이름을 입력해 주세요')
+                }else{
+                let inputName = document.frm.data_1.value;
+                let nameArr = inputName.split(' ');
+                let result = '';
+                for(let i in nameArr){
+                    result += nameArr[i].substring(0, 1).toUpperCase() + nameArr[i].substring(1) + ' ';
+                }
+                document.frm.data_2.value = result;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="test.jsp" method="GET" name="frm">
+            변경 전 이름 :<input type="text" name="data_1"><br>
+            변경 후 이름 :<input type="text" name="data_2"><br>
+            <input type="button" value="이름 변경" onclick="checkfrm()">
+        </form>
+    </body>
+</html>

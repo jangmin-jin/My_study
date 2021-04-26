@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type="text/javascript">
+        // 체크박스 데이터 보는 방법들
+            const checkfrm = () =>{
+                // console.log(document.frm.ch_1.checked);
+                // console.log(document.frm.ch_2.checked);
+                // console.log(document.frm.ch_3.checked);
+                // console.log(document.frm.ch_4.checked);
+
+                //document.frm.ch_4.checked = true;
+                
+                // console.log(document.frm.ch);
+                // console.log(document.frm.ch.length);
+                
+                for(let i=0; i<document.frm.ch.length; i++){
+                    // console.log(document.frm.ch[i].checked);
+                    if(document.frm.ch[i].checked == true){
+                        console.log(document.frm.ch[i].value);
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="test.jsp" method="GET" name="frm">
+            <!-- name을 통일시킬 경우 배열화 됨 -->
+            <input type="checkbox" name="ch" value="사과">사과<br>
+            <input type="checkbox" name="ch" value="참외">참외<br>
+            <input type="checkbox" name="ch" value="수박">수박<br>
+            <input type="checkbox" name="ch" value="딸기">딸기<br>
+            
+            <input type="button" value="검사하기" onclick="checkfrm()"><br>
+        </form>
+    </body>
+</html>

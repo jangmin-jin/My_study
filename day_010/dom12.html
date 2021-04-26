@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type="text/javascript">
+            const checkfrm = () =>{
+                // console.log(document.frm.s.options);
+                // console.log(document.frm.s.options.length);
+                // console.log(document.frm.s.options.selectedIndex);
+
+                // console.log(document.frm.s.options[document.frm.s.options.selectedIndex].text);
+                // console.log(document.frm.s.options[document.frm.s.options.selectedIndex].value);
+                
+                // document.frm.s.options.selectedIndex = 2 ; // 값을 선택하는 방법
+            }
+        </script>
+    </head>
+    <body>
+        <form action="test.jsp" method="GET" name="frm">
+            <select name="s">
+                <option value="1">사과</option>
+                <option value="2">참외</option>
+                <option value="3">수박</option>
+                <option value="4">딸기</option>
+            </select>
+            <input type="button" value="체크하기" onclick="checkfrm()"><br>
+        </form>
+    </body>
+</html>

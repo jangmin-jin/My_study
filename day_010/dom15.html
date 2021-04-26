@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type="text/javascript">
+            // 태그 보기, 태그 삽입, 태그 수정
+            const viewTags = () =>{
+                let h1 = document.getElementById('h_1');
+                console.log(h_1);
+                console.log(h_1.innerHTML);
+
+                let div_1 = document.getElementById('div_1');
+                console.log(div_1);
+                console.log(div_1.innerHTML);    // 해당 html 전체
+                console.log(div_1.textContent);  // 내용만
+            };
+            const insertTags = () =>{
+                let div2 = document.getElementById('div_2');
+                div2.innerHTML = '<b>Inner HTML</b>';
+            };
+            const modifyTags = () =>{
+                let div2 = document.getElementById('div_2');
+                div2.innerHTML = '<b>Inner HTML modify</b>';
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" value="tag 보기" onclick="viewTags()"><br>
+        <input type="button" value="tag 추가" onclick="insertTags()"><br>
+        <input type="button" value="tag 수정" onclick="modifyTags()"><br>
+        <hr>
+        <h1 id="h_1">Header 1</h1>
+        <h1 id="h_2">Header 2</h1>
+        <h1 id="h_3">Header 3</h1>
+        <h2 id="h_4">Header 4</h2>
+        <div id="div_1">
+            <h2 id="hh_2">Header 4</h2>
+        </div>
+        <div id="div_2">
+
+        </div>
+    </body>
+</html>
