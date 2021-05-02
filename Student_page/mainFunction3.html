@@ -5,57 +5,69 @@
     <title>Document</title>
     <script>
         const reportCard =()=>{
-            // 입력 조건 : 과목수 20개 이하, 학생수 40명 ~ 100 사이
-            const valueCheck = (stuNum, subNum) =>{
-                if(subNum > 20){
-                    return true;
-                }else if(stuNum < 40 || stuNum > 100){
-                    return true;
-                }
-                return false;
-            }
-            
-            // 출력 조건 : 20번째 줄마다 페이지 나눔 실행
-            const divPage = () =>{
-                if (stringNum == 0){
-                    result += '<h4>' + '[' + pageNum + ' 페이지]' + '</h4>';
-                    stringNum = pageDivNum;
-                    pageNum ++;
-                }
-                stringNum--;
-            }
 
             // 변수 선언부
+            // 학생수, 과목수를 받아서 변수에 넣어 주는 파트
             const stuNum = Number(document.information.studentNum.value);
             const subNum = Number(document.information.subNum.value);
             const pageDivNum = 20;
-            const div = document.getElementById('display');
-            let stringNum = 0;
+            // const div = document.getElementById('display');
+            let stringNum = 20;
             let pageNum = 1;
             let result = '';
 
             // 입력 조건 검증
-            if(valueCheck(stuNum, subNum)){
+            // 입력 조건 : 과목수 20개 이하, 학생수 40명 ~ 100 사이
+            if(subNum > 20){
+                alert("입력 가능한 범위가 아닙니다.");
+                return;
+            }
+
+            if(stuNum < 40 || stuNum > 100){
                 alert("입력 가능한 범위가 아닙니다.");
                 return;
             }
 
             // 출력조건하에 출력
+            // 출력 조건 : 20번째 줄마다 페이지 나눔 실행
+            // 출력 - 학생이름 - 과목 순으로 쭉 출력한다
             for(let i = 1; i <= stuNum; i++){
-                divPage();
+
+                if (stringNum == 20){
+                    result += '<h4>' + '[' + pageNum + ' 페이지]' + '</h4>';
+                    stringNum = 0;
+                    pageNum ++;
+                }
+                stringNum++; // 1
+
                 result += '<hr></hr>';
-                divPage();
+
+                if (stringNum == 20){
+                    result += '<h4>' + '[' + pageNum + ' 페이지]' + '</h4>';
+                    stringNum = 0;
+                    pageNum ++;
+                }
+                stringNum++; // 2 // 20
+
                 result += '학생이름:' + i;
                 result += '<br>';
+
                 for(let j = 1; j <= subNum; j++){
-                    divPage();
+
+                    if (stringNum == 20){
+                    result += '<h4>' + '[' + pageNum + ' 페이지]' + '</h4>';
+                    stringNum = 0;
+                    pageNum ++;
+                    }
+                    stringNum++; // 3 // 4 // 20
+
                     result += '과목' + j + ":";
                     result += '<br>';
                 }
             }
             
-            // document.write(result);
-            div.innerHTML = result;
+            document.write(result);
+            // div.innerHTML = result;
         }
 
     </script>
