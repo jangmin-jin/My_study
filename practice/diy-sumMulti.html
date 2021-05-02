@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>연습문제 1</title>
+</head>
+<body>
+	<h1>입력받은 숫자가 같으면 곱하고, 다르면 더하는 함수 구현</h1>
+	<script>
+		// 두 숫자를 받는 변수 선언
+		let num1 = Number(prompt(" 첫번째 값을 입력하세요 "));
+		let num2 = Number(prompt(" 두번째 값을 입력하세요 "));
+		let result = 0;
+		// 두 숫자를 비교 : 같으면 곱하고, 다르면 더하는 함수 sumMulti를 작성
+		let sumMulti = () =>{
+			if (num1 == num2){
+				result = num1 * num2;
+			}else{
+				result = num1 + num2;
+			}
+			return result;
+		}
+		// 결과를 출력
+		console.log(sumMulti());
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>연습문제 2</title>
+	<script>
+		const biggerNum = (num1, num2) =>{
+			if(num1 > num2){
+				alert(num1 + "이(가)" + num2 + "보다 큽니다.");
+			}else{
+				alert(num2 + "이(가)" + num1 + "보다 큽니다.");
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>숫자 크기 비교 기능 구현</h1>
+	<script>
+		let num1 = Number(prompt("첫번째 숫자를 입력하세요"));
+		let num2 = Number(prompt("두번째 숫자를 입력하세요"));
+		biggerNum(num1, num2);
+	</script>
+</body>
+</html>

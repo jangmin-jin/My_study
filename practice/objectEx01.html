@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var book = {
+            title : "자바스크립트",
+            author : "고쌤",
+            pages : 500,
+            price : 1500,
+            info : function(){
+                alert(this.title + "책의 분량은" + this.pages + "쪽 입니다.");
+            }
+        }
+        
+        function Book(author, pages, price, title){
+            this.author = author;
+            this.pages = pages;
+            this.price = price;
+            this.title = title;
+        }
+
+        let html = new Book("ko", "608", "28,000", "웹 표준의 정석");
+        let yotube = new Book("kim", "368", "16,000", "유튜브 영상 만들기");
+        let python = new Book("jin", "702", "180,000", "파이썬의 모든것");
+
+        let bookList = [html, yotube, python];
+
+        document.write("<h1>책 제목으로 살펴보기</h1>");
+        for(let i = 0; i < bookList.length; i++){
+            document.write("<p>" + bookList[i].title + "<br>" + bookList[i].price + "</p>");
+        }
+    </script>
+</body>
+</html>
