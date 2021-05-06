@@ -1,0 +1,31 @@
+#student {
+    width: 100px;
+    height: 50px;
+}
+
+#subject {
+    width: 100px;
+    height: 50px;
+}
+
+#inText {
+    width: 200px;
+    height: 44px;
+    text-align: center;
+}
+
+#addBtn {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(105, 156, 109);
+}
+#delBtn {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(196, 93, 93);
+}
+#printBtn {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(138, 138, 138);
+}
