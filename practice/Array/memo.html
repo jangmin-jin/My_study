@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [{
+            국어 : 100,
+            영어 : 80,
+            수학 : 90
+        },
+        {
+            국어 : 90,
+            영어 : 100,
+            수학 : 60
+        }]
+
+        let str = "국어";
+
+        console.log(arr[0]);
+
+        let keyarr = Object.keys(arr[0])[2];
+        console.log(keyarr);
+        console.log(typeof keyarr);
+
+
+        delete arr[0].str;
+        
+        for(let stu in arr[0]){
+            console.log( stu + arr[0][stu] );
+        }
+
+        
+    </script>
+</body>
+</html>

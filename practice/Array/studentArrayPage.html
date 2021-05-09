@@ -8,27 +8,27 @@
     <link rel="stylesheet" href="./css/select.css">
 </head>
 <body>
-    <select id="student">
-        <option id="stu1">학생 1</option>
-        <option id="stu2">학생 2</option>
-        <option id="stu3">학생 3</option>
-        <option id="stu4">학생 4</option>
-        <option id="stu5">학생 5</option>
+    
+    <!-- 학생 선언부 -->
+    <select id="student" onchange="checkId()">
+        <option id="0" >학생선택</option>
+        <option id="1" >학생 1</option>
+        <option id="2" >학생 2</option>
+        <option id="3" >학생 3</option>
+        <option id="4" >학생 4</option>
+        <option id="5" >학생 5</option>
+        <option id="6" >학생 6</option>
+        <option id="7" >학생 7</option>
+        <option id="8" >학생 8</option>
+        <option id="9" >학생 9</option>
+        <option id="0" >학생 10</option>
     </select>
 
-    <select id="subject">
-        <option id="sub1" value="korean">국어</option>
-        <option id="sub2" value="english">영어</option>
-        <option id="sub3" value="math">수학</option>
-        <option id="sub4" value="society">사회</option>
-        <option id="sub5" value="science">과학</option>
-    </select>
-
-    <input type="text" name="inText" id="inText" placeholder="점수를 입력하세요">
-    <button type="button" id="addBtn">추가</button>
-    <input type="button" id="delBtn" value="삭제">
-    <input type="button" id="printBtn" value="출력">
-
+    <input type="text" name="inTextSub" id="inTextSub" placeholder="과목을 입력하세요">
+    <input type="text" name="inTextScore" id="inTextScore" placeholder="성적을 입력하세요">
+    <input type="button" id="addBtn" value="추가/수정" onclick="addsubject()">
+    <input type="button" id="printBtn" value="출력" onclick="printout()">
+    <div id="printAria"></div>
     <script src="./js/studentArrayPage.js"></script>
 </body>
 </html>

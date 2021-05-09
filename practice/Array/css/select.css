@@ -2,30 +2,65 @@
     width: 100px;
     height: 50px;
 }
-
 #subject {
     width: 100px;
     height: 50px;
 }
-
-#inText {
+#inTextSub {
     width: 200px;
     height: 44px;
     text-align: center;
 }
-
+#inTextScore {
+    width: 150px;
+    height: 44px;
+    text-align: center;
+}
 #addBtn {
-    width: 100px;
+    width: 70px;
     height: 50px;
     background-color: rgb(105, 156, 109);
+}
+#printBtn {
+    width: 70px;
+    height: 50px;
+    background-color: rgb(136, 136, 136);
 }
 #delBtn {
     width: 100px;
     height: 50px;
     background-color: rgb(196, 93, 93);
 }
-#printBtn {
-    width: 100px;
+#modifyBtn {
+    width: 70px;
     height: 50px;
     background-color: rgb(138, 138, 138);
+}
+ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+ul li{
+    cursor:pointer;
+    position:relative;
+    padding:12px 8px 12px 40px;
+    background: rgb(240, 240, 240);
+    font-size:18px;
+    transition: 0.2s;
+}
+ul li:hover {
+    background-color:#ddd;
+}
+.deleteSub {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px 10px;
+    border: none;
+    background-color: rgb(255, 225, 225);
+}
+.deleteSub:hover{
+    background-color: rgb(255, 108, 108);
+    color:white;
 }
