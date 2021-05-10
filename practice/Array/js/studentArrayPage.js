@@ -7,7 +7,7 @@ let makeStudent = function(name, kor, eng, math, soci, sci) {
         수학: math,
         사회: soci,
         과학: sci
-    };
+    }; 
     return obj;
 }
 
@@ -75,10 +75,7 @@ function addsubject() {
 
 // 출력버튼을 누르면 선택된 학생에 맞춰 목록창 출력
 function printout() {
-    // if(inputSub =="" && inputScore == ""){
-    //     alert("입력값을 확인해 주세요.");
-    //     return;
-    // }
+
     let result = "<ul>";
     for(let key in stuArr[student]){
         result += "<li>" + key + "\t : \t" + stuArr[student][key] +"<span class='deleteSub' id=" + "'" + key + "'" + ">삭제</span></li>";
