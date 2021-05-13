@@ -51,7 +51,6 @@ function checksubject(inputScore) {
 }
 
 // 입력한 과목을 해당 학생의 배열에 추가 해주는 기능
-
 function addsubject() {
     inputSub = document.querySelector("#inTextSub").value;
     inputSub = inputSub.replace(/^\s+|\s+$/gm, '');
@@ -78,7 +77,8 @@ function printout() {
 
     let result = "<ul>";
     for(let key in stuArr[student]){
-        result += "<li>" + key + "\t : \t" + stuArr[student][key] +"<span class='deleteSub' id=" + "'" + key + "'" + ">삭제</span></li>";
+        result += "<li>" + key + "\t : \t" + stuArr[student][key] 
+               + "<span class='deleteSub' id=" + "'" + key + "'" + ">삭제</span></li>";
     }
     result += "</ul>";
 

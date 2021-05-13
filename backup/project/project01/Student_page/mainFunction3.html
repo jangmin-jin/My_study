@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        const reportCard =()=>{
+
+            // 변수 선언부
+            // 학생수, 과목수를 받아서 변수에 넣어 주는 파트
+            const stuNum = Number(document.information.studentNum.value);
+            const subNum = Number(document.information.subNum.value);
+            const pageDivNum = 20;
+            // const div = document.getElementById('display');
+            let stringNum = 20;
+            let pageNum = 1;
+            let result = '';
+
+            // 입력 조건 검증
+            // 입력 조건 : 과목수 20개 이하, 학생수 40명 ~ 100 사이
+            if(subNum > 20){
+                alert("입력 가능한 범위가 아닙니다.");
+                return;
+            }
+
+            if(stuNum < 40 || stuNum > 100){
+                alert("입력 가능한 범위가 아닙니다.");
+                return;
+            }
+
+            // 출력조건하에 출력
+            // 출력 조건 : 20번째 줄마다 페이지 나눔 실행
+            // 출력 - 학생이름 - 과목 순으로 쭉 출력한다
+            for(let i = 1; i <= stuNum; i++){
+
+                if (stringNum == 20){
+                    result += '<h4>' + '[' + pageNum + ' 페이지]' + '</h4>';
+                    stringNum = 0;
+                    pageNum ++;
+                }
+                stringNum++; // 1
+
+                result += '<hr></hr>';
+
+                if (stringNum == 20){
+                    result += '<h4>' + '[' + pageNum + ' 페이지]' + '</h4>';
+                    stringNum = 0;
+                    pageNum ++;
+                }
+                stringNum++; // 2 // 20
+
+                result += '학생이름:' + i;
+                result += '<br>';
+
+                for(let j = 1; j <= subNum; j++){
+
+                    if (stringNum == 20){
+                    result += '<h4>' + '[' + pageNum + ' 페이지]' + '</h4>';
+                    stringNum = 0;
+                    pageNum ++;
+                    }
+                    stringNum++; // 3 // 4 // 20
+
+                    result += '과목' + j + ":";
+                    result += '<br>';
+                }
+            }
+            
+            document.write(result);
+            // div.innerHTML = result;
+        }
+
+    </script>
+</head>
+<body>
+    <h2>성적 일람표 입니다.</h2>
+    <form name="information">
+        <input type="text" name="studentNum" id="studentId" placeholder="학생수 최소:40명 최대:100명">
+        <input type="text" name="subNum" id="subNumId" placeholder="과목수 최대:20">
+        <input type="button" onclick="reportCard()" value="조회하기"></input>
+    </form>
+    <br>
+    <div id="display">
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/select.css">
+</head>
+<body>
+    
+    <!-- 학생 선언부 -->
+    <select id="student">
+        <option id="selectstu">학생선택</option>
+        <option id="0" >학생 1</option>
+        <option id="1" >학생 2</option>
+        <option id="2" >학생 3</option>
+        <option id="3" >학생 4</option>
+        <option id="4" >학생 5</option>
+        <option id="5" >학생 6</option>
+        <option id="6" >학생 7</option>
+        <option id="7" >학생 8</option>
+        <option id="8" >학생 9</option>
+        <option id="9" >학생 10</option>
+    </select>
+
+    <input type="text" name="inTextSub" id="inTextSub" placeholder="과목을 입력하세요">
+    <input type="text" name="inTextScore" id="inTextScore" placeholder="성적을 입력하세요">
+    <input type="button" id="addBtn" value="추가/수정" onclick="addSubScore()">
+    <input type="button" id="printBtn" value="출력" onclick="printout()">
+    <div id="printAria"></div>
+    <script src="./js/studentArrayPage.js"></script>
+</body>
+</html>
+
+<!-- 
+    이벤트 발생 -> target -> value 나 id 받아서 처리하는거
+    checkId쪽 데이터 받을때 this나 target을 이용해서 할수있는 방안 찾기
+    
+    remove나 student이용하는 func들 stdent변수 흐름좀더알기쉽게
+ -->
