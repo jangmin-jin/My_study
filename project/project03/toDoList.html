@@ -9,13 +9,14 @@
 </head>
 <body>
   <h2>일정 관리</h2>
-  <form action="">
-    <input type="text" placeholder="해야할 일을 입력하세요" id="inputList">
+  <!-- 엔터를 눌렀을때 submit되지 않도록 방지 onsubmit -->
+  <form action="" onsubmit="return false">
+    <input type="text" placeholder="해야할 일을 입력하세요" id="inputList" onkeydown="if(event.keyCode ==13) addToDoList()">
     <input type="button" value="+" id="addList" onclick="addToDoList()">
   </form>
   <hr>
   <div id="printAria"></div>
+  <i class="fas fa-check"></i>
 </body>
 <script src="./toDoList.js"></script>
-<!-- <script src="./toDoList2.js"></script> -->
 </html>
