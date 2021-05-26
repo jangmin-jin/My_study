@@ -11,12 +11,28 @@
   <h2>일정 관리</h2>
   <!-- 엔터를 눌렀을때 submit되지 않도록 방지 onsubmit -->
   <form action="" onsubmit="return false">
+    <!-- 입력상자, 추가버튼 -->
     <input type="text" placeholder="해야할 일을 입력하세요" id="inputList" onkeydown="if(event.keyCode ==13) addToDoList()">
     <input type="button" value="+" id="addList" onclick="addToDoList()">
   </form>
   <hr>
-  <div id="printAria"></div>
+
+  <!-- 결과 출력부 -->
+  <div id="printAria">
+    <ul id="printAriaUl">
+      <!-- <li>
+
+        <input type="checkbox">
+        <span class='toDoList'>야호</span>
+        <span class='addTime'>시간</span>
+        <span class='modifyTodo'>(수정버튼)</span>
+        <span class='delTodo'>(삭제버튼)</span>
+
+      </li> -->
+    </ul>
+  </div>
   <i class="fas fa-check"></i>
 </body>
 <script src="./toDoList.js"></script>
+<!-- <script src="./toDoList copy.js"></script> -->
 </html>

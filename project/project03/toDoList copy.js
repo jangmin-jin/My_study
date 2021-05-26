@@ -56,10 +56,18 @@ const addToDoList = () =>{
   printToDo();
 }
 
-// let addLi = () =>{
-//   let targetUl = document.getElementById("printAriaUl");
-  
-// }
+let addLi = () =>{
+  let targetUl = document.getElementById("printAriaUl");
+  let result = "<li>"
+              + "<input type='checkbox' id='cb' name='checkbox'></input>"
+              + "<label for='cb'>"
+              + "<span class='todoList'>" + "얍" + "</span>" +"\t"
+              + "<span class='addTime'>" + "시간" + "</span>" + "\t"
+              + "<span class='modifyToDo' ></span>" +"\t"
+              + "<span class='delToDo' ></span>" +"\t"
+              +"</label></li>";
+  targetUl.appendChild(result);
+}
 
 const printToDo = () =>{
   // 결과값에 포함된 요소들
@@ -69,16 +77,7 @@ const printToDo = () =>{
   // 4. 수정 작업을 위한 로직
   // 5. 삭제 작업를 위한 로직
   let result = "<ul>";
-  for(let list in toDoList){
-    result += "<li>"
-            + "<input type='checkbox' id='cb" + list +"' name='checkbox' value=" + "'" + list + "'" + "'></input>"
-            + "<label for='cb" + list + "'>"
-            + "<span class='todoList'>" + toDoList[list] + "</span>" +"\t"
-            + "<span class='addTime'>" + toDoListTime[list] + "</span>" + "\t"
-            + "<span class='modifyToDo' id=" + "'" + list + "'" + "></span>" +"\t"
-            + "<span class='delToDo' id=" + "'" + list + "'" + "></span>" +"\t"
-            +"</label></li>";
-  }
+
   result += "</ul>";
   
   // printAria에 결과출력
