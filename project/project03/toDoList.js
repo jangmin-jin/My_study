@@ -1,8 +1,153 @@
-// Todo목록들과 목록들이 삽입, 수정된 시간을 담을 배열선언
-let toDoList = new Array;
-let toDoListTime = new Array;
+// id 순서를 정하는 변수
+let todoId = 0;
 
-// Todo추가, 수정할때마다 실행하여 시간을 기록
+const addToDoList = () =>{
+  /* Dom tree 구조
+    div(id="printAria")
+    ㄴ
+      ul(id=ul+todoId)
+      ㄴ
+        li(class=todoList)
+        ㄴ checkBox
+        ㄴ 텍스트
+        ㄴ modify(class=modifyToDo id=todoId)
+        ㄴ delete(class=delToDo id=todoId)
+  */
+  // 입력창
+  const inputToDoList = document.querySelector("#inputList");
+  // 입력한 텍스트 검증
+  if( checkinputTodoText(inputToDoList.value) ){
+    return
+  }
+
+  // 프린트 영역
+  const printArea = document.querySelector("#printAria");
+  // ul li 선언
+  const printAreaUl = document.createElement("ul");
+  printAreaUl.setAttribute("id", "ul" + todoId);
+  const printAreaLi = document.createElement("li");
+  printAreaLi.setAttribute("class", "todo_List");
+  // printAreaLi.setAttribute("id", "li" + todoId);
+
+  //체크박스
+  const checkTodo = document.createElement("input")
+  checkTodo.type="checkbox";
+
+  // 입력창에 입력한 텍스트
+  const addTodoListP = document.createElement("span");
+  addTodoListP.setAttribute("class", "add_text");
+  const inputToDoListValue = inputToDoList.value;
+  const addTodoList = document.createTextNode(inputToDoListValue.trim());
+  addTodoListP.appendChild(addTodoList);
+
+  // 입력한 시간
+  const addTodoWhenTimeP = document.createElement("span");
+  addTodoWhenTimeP.setAttribute("class", "add_time");
+  const whenInput = addTime();
+  const addTodoWhenTime = document.createTextNode(whenInput);
+  addTodoWhenTimeP.appendChild(addTodoWhenTime);
+  
+
+  // 수정, 삭제를 위한 트리 작성
+  const modifyTodo = document.createElement("span");
+  modifyTodo.setAttribute("class", "modify_text");
+  modifyTodo.setAttribute("id", todoId);
+  const modifyTodoText = document.createTextNode("[수정]");
+
+  const delTodo = document.createElement("span");
+  delTodo.setAttribute("class", "del_text");
+  delTodo.setAttribute("id", todoId);
+  const delTodoText = document.createTextNode("[삭제]");
+  // 텍스트 추가
+  modifyTodo.appendChild(modifyTodoText);
+  delTodo.appendChild(delTodoText);
+
+  // 상속
+  // li <- checkTodo(체크박스)
+  // li <- addTodoListP(입력 텍스트)
+  // li <- addTodoWhenTimeP(입력 시간 텍스트)
+  // li <- modifyTodo(수정을위한 버튼)
+  // li <- delTodo(삭제를위한 버튼)
+  printAreaLi.appendChild(checkTodo);
+  printAreaLi.appendChild(addTodoListP);
+  printAreaLi.appendChild(addTodoWhenTimeP);
+  printAreaLi.appendChild(modifyTodo);
+  printAreaLi.appendChild(delTodo);
+
+  // printArea(출력부) <- ul(리스트 틀) <- li(5가지요소 포함)
+  printAreaUl.appendChild(printAreaLi);
+  printArea.appendChild(printAreaUl);
+
+  // 출력시, 최근 추가한 사항이 상위로 올라오도록
+  printArea.insertBefore(printAreaUl, printArea.childNodes[0]);
+  inputToDoList.value="";
+
+  // 추가시 id값 ++
+  todoId++;
+
+  // 삭제
+  const doDelTodo = document.querySelector(".del_text");
+  doDelTodo.addEventListener("click", function(){
+    // 지우자 하는 버튼의 id값을 이용
+    delTodoFunc(this.id);
+  });
+
+  // 수정
+  const doModifyTodo = document.querySelector(".modify_text");
+  doModifyTodo.addEventListener("click", function(){
+    // 수정하고자 하는 버튼의 id값을 이용
+    modifyFunc(this.id);
+  });
+}
+
+// 삭제 함수
+const delTodoFunc = (delId) =>{
+  console.log(delId);
+  const delWhat = document.getElementById('ul' + delId);
+  delWhat.parentNode.removeChild(delWhat);
+}
+
+// 수정 함수
+const modifyFunc = (modifyId) =>{
+
+  const thisLiAddress = 0;
+  const thisTextAddress = 1;
+  const thisTimeAddress = 2;
+  const modiText = document.getElementById('ul' + modifyId).childNodes[thisLiAddress].childNodes[thisTextAddress];
+  const modiTime = document.getElementById('ul' + modifyId).childNodes[thisLiAddress].childNodes[thisTimeAddress];
+  
+  // 수정사항 입력
+  const inputModiText = prompt("수정사항을 입력하세여");
+  
+  // 입력값 검증
+  if(checkinputTodoText(inputModiText.trim())){
+    return
+  } 
+
+  // 수정시간, 수정사항 적용
+  modiTime.textContent = addTime();
+  modiText.textContent = inputModiText;
+}
+
+// 모든리스트 삭제 함수
+const delAllList = () =>{
+  const allList = document.getElementById('printAria');
+  while(allList.hasChildNodes()){
+    allList.removeChild(allList.firstChild);
+  }
+}
+
+// 입력값 검증 함수
+const checkinputTodoText = (inputText) =>{
+  if(inputText == ""){
+    alert("내용을 입력하세요!");
+    return true
+  } else{
+    return false
+  }
+}
+
+// 시간 추가 함수
 const addTime = () =>{
   let time = new Date();
   // let inputTime = time.format("yyyy-MM-dd(KS) HH:mm:ss");
@@ -16,107 +161,4 @@ const addTime = () =>{
   // 탬플릿 선언
   let inputTime =`${year}-${month}-${date} ${hours}:${minutes}:${seconds}` 
   return inputTime
-}
-
-// 입력했을시 입력값에 따른 예외처리
-const checkToDoText = (userInputText) =>{
-  if (userInputText == ""){
-    alert("해야할 일을 입력하세요 !");
-    return true
-  }
-  return false
-}
-
-// 수정했을시 수정값에 따른 예외처리
-const checkModifyText = (modifyText) =>{
-  if(modifyText == ""){
-    alert("수정 사항을 입력하세요 !");
-    return true
-  }
-  return false
-}
-
-// Todo추가를 위한 함수
-const addToDoList = () =>{
-  let userInputText = document.querySelector("#inputList").value;
-  userInputText = userInputText.trim();
-
-  // 입력 조건 확인
-  if(checkToDoText(userInputText)) {
-    return
-  }
-
-  document.querySelector("#inputList").value = "";
-  
-  // 입력한 Todo, 시간 추가
-  toDoList.push(userInputText);
-  toDoListTime.push(addTime());
-
-  // 프린트
-  printToDo();
-}
-
-// let addLi = () =>{
-//   let targetUl = document.getElementById("printAriaUl");
-  
-// }
-
-const printToDo = () =>{
-  // 결과값에 포함된 요소들
-  // 1. checkbox
-  // 2. Todo항목
-  // 3. Todo삽입, 수정시 반영된 시간
-  // 4. 수정 작업을 위한 로직
-  // 5. 삭제 작업를 위한 로직
-  let result = "<ul>";
-  for(let list in toDoList){
-    result += "<li>"
-            + "<input type='checkbox' id='cb" + list +"' name='checkbox' value=" + "'" + list + "'" + "'></input>"
-            + "<label for='cb" + list + "'>"
-            + "<span class='todoList'>" + toDoList[list] + "</span>" +"\t"
-            + "<span class='addTime'>" + toDoListTime[list] + "</span>" + "\t"
-            + "<span class='modifyToDo' id=" + "'" + list + "'" + "></span>" +"\t"
-            + "<span class='delToDo' id=" + "'" + list + "'" + "></span>" +"\t"
-            +"</label></li>";
-  }
-  result += "</ul>";
-  
-  // printAria에 결과출력
-  const printAria = document.querySelector("#printAria");
-  printAria.innerHTML = result;
-
-  // 삭제 이벤트 감지 - 해당요소 삭제후 다시 출력
-  let delToDo = document.querySelectorAll(".delToDo");
-  for(let i=0; i<delToDo.length; i++){
-    delToDo[i].addEventListener("click", function(){
-      const delToDoWhat = this.getAttribute("id");
-      delete toDoList[delToDoWhat];
-      
-      printToDo();
-    });
-  }
-
-  // 수정 이벤트 감지 - 해당요소 수정후 다시 출력
-  let modifyToDo = document.querySelectorAll(".modifyToDo");
-  for(let i=0; i<modifyToDo.length; i++){
-    modifyToDo[i].addEventListener("click", function(){
-      const modifyToDoWhat = this.getAttribute("id");
-
-      // 수정 실행 함수
-      modifyToDoList(modifyToDoWhat);
-      printToDo();
-    })
-  }
-}
-
-// 수정 실행 함수
-const modifyToDoList = (modifyToDoWhat) =>{
-  let modifyText = prompt("할일을 다시 입력해주세요!");
-  
-  // 수정 조건 검증
-  if(checkModifyText(modifyText)) return;
-  
-  // Todo와 반영시간 수정
-  toDoList[modifyToDoWhat] = modifyText;
-  toDoListTime[modifyToDoWhat] = addTime();
 }

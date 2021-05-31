@@ -31,7 +31,7 @@ ul li:hover {
 }
 .delToDo {
   position: absolute;
-  right: 0;
+  /* right: 0; */
   top: 0;
   padding: 15px 15px;
   margin: 0px -150px;
@@ -46,15 +46,12 @@ ul li:hover {
   background-position-y: 4px;
 }
 .modifyToDo{
-  position: absolute;
-  right: initial;
-  right: 0;
-  top: 0;
-  padding: 15px 15px;
-  margin: 0px -120px;
+  position: fixed;
+  padding: -100px 100px;
+  margin: 5px 5px;
   border: none;
   background-image: url(./images/edit.png);
-  background-size: 25px 25px;
+  background-size: 15px 15px;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -62,11 +59,11 @@ ul li:hover {
   background-position-y: 4px;
 }
 .checkIcon{
-  position: absolute;
-  right: initial;
+  position: relative;
+  /* right: initial; */
   top: 0;
-  padding: 20px 15px;
-  margin: 5px 5px 5px 5px;
+  /* padding: 20px 15px; */
+  /* margin: 5px 5px 5px 5px; */
   border: none;
   background-image: url(./images/check.png);
   background-size: 10px 10px;
@@ -84,7 +81,7 @@ ul li:hover {
   padding: 10px 5px 10px 40px;
 }
 
-input[type="checkbox"]{
+/* input[type="checkbox"]{
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -167,4 +164,4 @@ input[type="checkbox"]:checked + label:after {
   -o-transition: -o-transform 200ms ease-out;
   -webkit-transition: -webkit-transform 200ms ease-out;
   transition: transform 200ms ease-out;
-}
+} */
