@@ -1,0 +1,109 @@
+/* 헤드라인 */
+h2{
+  text-align: center;
+}
+/* 입력 상자 */
+#inputList {
+  width: 500px;
+  height: 44px;
+  text-align: center;
+}
+/* +버튼 */
+#addList {
+  width: 70px;
+  height: 50px;
+  background-color: rgb(154, 253, 129);
+  font-size: 1em;
+  font-style: initial;
+}
+#addList:hover {
+  background-color: rgb(87, 223, 117);
+}
+ul{
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+li{
+  padding:10px 10px 10px 10px;
+  background: rgb(235, 250, 255);
+  font-size:18px;
+  transition: 0.2s;
+}
+ul li:hover {
+  background-color:rgb(161, 188, 219);
+}
+input[type='checkbox']{
+  vertical-align: middle;
+  border-radius: 50%;
+  left: 2px;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+
+}
+.add_text{
+  vertical-align: middle;
+}
+
+/* 삭제버튼 */
+button.del_text {
+  display: inline-block;
+  float: right;
+  border: none;
+  margin: 0px 5px;
+  padding: 15px 15px;
+  text-align: center;
+  background-color: transparent;
+  background-image: url(../images/delete.png);
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  background-position: center;
+}
+button.del_text:hover{
+  display: inline;
+  background-position-y: 4px;
+}
+
+/* 수정버튼 */
+button.modify_text{
+  display: inline-block;
+  float: right;
+  border: none;
+  margin: auto;
+  margin: 0px 0px;
+  padding: 15px 15px;
+  text-align: center;
+  background-color: transparent;
+  background-image: url(../images/edit.png);
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  background-position: center;
+}
+button.modify_text:hover{
+  display: inline;
+  background-position-y: 4px;
+}
+
+/* 전체 삭제버튼 */
+input[type=button].delAllList{
+  display: inline-block;
+  float: left;
+  border: none black solid;
+  margin: 10px 10px;
+  padding: 5px 100px;
+  background: rgb(255, 100, 100);
+  text-align: center;
+  border-radius: 10px;
+}
+input[type=button].delAllList:hover{
+ 
+  background: rgb(194, 81, 53);
+}
+
+/* 시간 */
+span.add_time{
+  font-size: 0.6em;
+  color: gray;
+  vertical-align: bottom;
+}

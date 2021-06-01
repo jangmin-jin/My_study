@@ -1,6 +1,3 @@
-// id 순서를 정하는 변수
-let todoId = 0;
-
 const addToDoList = () =>{
   /* Dom tree 구조
     div(id="printAria")
@@ -24,7 +21,8 @@ const addToDoList = () =>{
   const printArea = document.querySelector("#printAria");
   // ul li 선언
   const printAreaUl = document.createElement("ul");
-  printAreaUl.setAttribute("id", "ul" + todoId);
+  printAreaUl.setAttribute("name", "todo");
+  // printAreaUl.setAttribute("id", "ul" + todoId);
   const printAreaLi = document.createElement("li");
   printAreaLi.setAttribute("class", "todo_List");
   // printAreaLi.setAttribute("id", "li" + todoId);
@@ -49,18 +47,11 @@ const addToDoList = () =>{
   
 
   // 수정, 삭제를 위한 트리 작성
-  const modifyTodo = document.createElement("span");
+  const modifyTodo = document.createElement("button");
   modifyTodo.setAttribute("class", "modify_text");
-  modifyTodo.setAttribute("id", todoId);
-  const modifyTodoText = document.createTextNode("[수정]");
 
-  const delTodo = document.createElement("span");
+  const delTodo = document.createElement("button");
   delTodo.setAttribute("class", "del_text");
-  delTodo.setAttribute("id", todoId);
-  const delTodoText = document.createTextNode("[삭제]");
-  // 텍스트 추가
-  modifyTodo.appendChild(modifyTodoText);
-  delTodo.appendChild(delTodoText);
 
   // 상속
   // li <- checkTodo(체크박스)
@@ -71,8 +62,9 @@ const addToDoList = () =>{
   printAreaLi.appendChild(checkTodo);
   printAreaLi.appendChild(addTodoListP);
   printAreaLi.appendChild(addTodoWhenTimeP);
-  printAreaLi.appendChild(modifyTodo);
   printAreaLi.appendChild(delTodo);
+  printAreaLi.appendChild(modifyTodo);
+
 
   // printArea(출력부) <- ul(리스트 틀) <- li(5가지요소 포함)
   printAreaUl.appendChild(printAreaLi);
@@ -82,39 +74,37 @@ const addToDoList = () =>{
   printArea.insertBefore(printAreaUl, printArea.childNodes[0]);
   inputToDoList.value="";
 
-  // 추가시 id값 ++
-  todoId++;
-
   // 삭제
   const doDelTodo = document.querySelector(".del_text");
   doDelTodo.addEventListener("click", function(){
-    // 지우자 하는 버튼의 id값을 이용
-    delTodoFunc(this.id);
+    // console.log(this);
+    delTodoFunc(this);
   });
 
   // 수정
   const doModifyTodo = document.querySelector(".modify_text");
   doModifyTodo.addEventListener("click", function(){
     // 수정하고자 하는 버튼의 id값을 이용
-    modifyFunc(this.id);
+    modifyFunc(this);
   });
 }
 
 // 삭제 함수
 const delTodoFunc = (delId) =>{
-  console.log(delId);
-  const delWhat = document.getElementById('ul' + delId);
-  delWhat.parentNode.removeChild(delWhat);
+  const thisDIV = delId.parentNode.parentNode.parentNode;
+  const thisUL = delId.parentNode.parentNode
+  thisDIV.removeChild(thisUL);
 }
 
 // 수정 함수
 const modifyFunc = (modifyId) =>{
+  const thisDIV = modifyId.parentNode.parentNode.parentNode;
+  const thisLI = modifyId.parentNode;
 
-  const thisLiAddress = 0;
   const thisTextAddress = 1;
   const thisTimeAddress = 2;
-  const modiText = document.getElementById('ul' + modifyId).childNodes[thisLiAddress].childNodes[thisTextAddress];
-  const modiTime = document.getElementById('ul' + modifyId).childNodes[thisLiAddress].childNodes[thisTimeAddress];
+  const modiText = thisLI.childNodes[thisTextAddress];
+  const modiTime = thisLI.childNodes[thisTimeAddress];
   
   // 수정사항 입력
   const inputModiText = prompt("수정사항을 입력하세여");
