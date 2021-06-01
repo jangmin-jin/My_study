@@ -8,6 +8,11 @@ h2{
   height: 44px;
   text-align: center;
 }
+.container{
+  width: 583px;
+  height: 485px;
+  overflow: auto;
+}
 /* +버튼 */
 #addList {
   width: 70px;
@@ -48,7 +53,6 @@ input[type='checkbox']{
 
 /* 삭제버튼 */
 button.del_text {
-  display: inline-block;
   float: right;
   border: none;
   margin: 0px 5px;
@@ -67,7 +71,6 @@ button.del_text:hover{
 
 /* 수정버튼 */
 button.modify_text{
-  display: inline-block;
   float: right;
   border: none;
   margin: auto;
@@ -87,10 +90,9 @@ button.modify_text:hover{
 
 /* 전체 삭제버튼 */
 input[type=button].delAllList{
-  display: inline-block;
   float: left;
   border: none black solid;
-  margin: 10px 10px;
+  margin: 20px 150px;
   padding: 5px 100px;
   background: rgb(255, 100, 100);
   text-align: center;
